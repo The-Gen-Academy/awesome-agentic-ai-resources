@@ -1,6 +1,6 @@
 # Mastering Agentic AI Certification: Prerequisite Resource Pack
 
-Prepared for Aishwarya Srinivasan. This pack is designed for builders joining the Mastering Agentic AI certification. The filter is practical and high-signal: official docs, major AI labs, respected research papers, trusted engineering blogs, and credible institutional reports. Generic influencer content and hype-driven summaries are intentionally excluded.
+This pack is designed for builders joining the Mastering Agentic AI certification. 
 
 ## How to Use This Pack
 
