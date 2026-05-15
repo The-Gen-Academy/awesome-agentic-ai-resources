@@ -1,4 +1,4 @@
-# Mastering Agentic AI Certification: Prerequisite Resource Pack
+# Mastering Agentic AI Certification: Resource Pack
 
 This pack is designed for builders joining the Mastering Agentic AI certification. 
 
