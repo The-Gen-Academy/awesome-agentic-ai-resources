@@ -1,6 +1,6 @@
 # Mastering Agentic AI Certification: Resource Pack
 
-This pack is designed for builders joining the Mastering Agentic AI certification. 
+This pack is designed for builders joining the Mastering Agentic AI certification: https://maven.com/aishwarya-srinivasan/mastering-ai-agents
 
 ## How to Use This Pack
 
