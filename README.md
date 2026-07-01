@@ -3,7 +3,7 @@
 This pack is designed for builders joining the Mastering Agentic AI certification.
 If you want to learn directly from Aishwarya Srinivasan and Arvind Narayan for a six-week live cohort-based Mastering Agentic AI certification, join our upcoming October cohort. (August cohort is already sold out)
 
-We are currently offering an EARLYBIRD25% discount for the October cohort. Enroll before the seats get filled up: 
+We are currently offering an EARLYBIRD 25% discount for the October cohort. Enroll before the seats get filled up: 
 https://maven.com/aishwarya-srinivasan/mastering-ai-agents?promoCode=EARLYBIRD
 
 ## How to Use This Pack
