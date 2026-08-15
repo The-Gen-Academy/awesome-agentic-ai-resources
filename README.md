@@ -116,6 +116,7 @@ Understand what makes a system agentic, how agent loops and planning patterns wo
 | [Google Agent Development Kit Tutorials](https://google.github.io/adk-docs/tutorials/) | Official docs | 1 hr | Learners comparing Google ADK with LangGraph and OpenAI Agents SDK. |
 | [Hugging Face Agents Course: LangGraph Unit](https://huggingface.co/learn/agents-course/unit2/langgraph/introduction) | Course | 2 hrs | Learners who want additional visual reinforcement. |
 | [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents), Anthropic | Engineering blog | 20 min | Builders moving from toy agents to production agents. |
+| [DeepSeek Harness Handbook](https://github.com/sandbaseai/deepseek-harness-handbook) | Open-source handbook | 2-4 hrs, segmentable | Builders who want a source-backed walkthrough of one composable agent runtime, including tools, MCP, subagents, sessions, approval, and sandbox boundaries. |
 
 ## Week 4: AI Evals, Observability and Monitoring
 
@@ -221,4 +222,3 @@ Identify real LLM risks, design mitigations, understand prompt injection, implem
 | [DataTalks.Club MLOps Zoomcamp](https://datatalks.club/blog/mlops-zoomcamp.html) | Course | Targeted modules | Learners who need broader MLOps/production infrastructure context. |
 | [NeMo Guardrails Tutorials](https://docs.nvidia.com/nemo/guardrails/latest/getting-started/tutorials/index.html) | Docs | 1-2 hrs | Learners implementing programmable guardrails. |
 | [OWASP GenAI Security Project](https://genai.owasp.org/) | Project hub | Reference | Learners tracking evolving AI security guidance. |
-
