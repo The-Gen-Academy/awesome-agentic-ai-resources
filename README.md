@@ -222,3 +222,4 @@ Identify real LLM risks, design mitigations, understand prompt injection, implem
 | [DataTalks.Club MLOps Zoomcamp](https://datatalks.club/blog/mlops-zoomcamp.html) | Course | Targeted modules | Learners who need broader MLOps/production infrastructure context. |
 | [NeMo Guardrails Tutorials](https://docs.nvidia.com/nemo/guardrails/latest/getting-started/tutorials/index.html) | Docs | 1-2 hrs | Learners implementing programmable guardrails. |
 | [OWASP GenAI Security Project](https://genai.owasp.org/) | Project hub | Reference | Learners tracking evolving AI security guidance. |
+
