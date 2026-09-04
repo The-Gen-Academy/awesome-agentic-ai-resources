@@ -147,6 +147,7 @@ Move from "I hope this works" to "I can measure whether it works." Learners shou
 | [Calibrating LLM-as-a-Judge](https://www.langchain.com/articles/llm-as-a-judge), LangChain | Blog | 20 min | Learners implementing human correction loops. |
 | [LLM-as-a-Judge Evaluator Templates](https://arize.com/llm-as-a-judge/), Arize | Guide | 20 min | Learners building reusable eval templates. |
 | [Evaluating and Debugging Generative AI](https://www.deeplearning.ai/short-courses/evaluating-debugging-generative-ai/), DeepLearning.AI and W&B | Short course | 50 min | Learners who want a Weights & Biases angle. |
+| [Agent QA](https://github.com/vostride/agent-qa) | Tool and docs | 30 min | Builders validating application-level web and mobile outcomes alongside model and agent-trajectory evals. |
 
 ## Week 5: Finetuning and Local Models
 
