@@ -79,6 +79,7 @@ You are ready for Week 1 when you can:
 - write and run one basic automated test
 
 ## The Forward Deployed Engineer’s Quest
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/d92a5a28-0ce8-4a8d-b241-b6c106591c1d" />
 
 
 ## Week 1 — Learn How Systems Talk
