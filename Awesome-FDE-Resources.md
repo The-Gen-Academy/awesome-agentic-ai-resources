@@ -86,15 +86,20 @@ You are ready for Week 1 when you can:
 > Learn how applications exchange data, react to events, manage permissions,
 > and store information.
 
-### Enterprise Integration
+# Enterprise Integration
 
-What is it?
+## What is it?
+
 Enterprise integration means connecting different applications, services, databases, and devices so that they can exchange information and support one complete business workflow.
+
 For example, a customer-support solution might connect:
+
 Support ticket system → AI service → customer database → Slack notification
 
 These systems may belong to different companies, use different data formats, and require different authentication methods.
-Why does an FDE need it?
+
+## Why does an FDE need it?
+
 FDEs usually deploy solutions inside an organisation that already has many systems. They rarely get to build everything from scratch.
 An FDE needs enterprise integration to:
 - Connect a product to customer systems
@@ -106,7 +111,9 @@ An FDE needs enterprise integration to:
 - Design for unavailable or unreliable external systems
 
 Without integration knowledge, an FDE may build a good demonstration that cannot function inside the customer’s real environment.
-What should you learn?
+
+## What should you learn?
+
 Focus on:
 - How data moves between systems
 - Synchronous and asynchronous communication
