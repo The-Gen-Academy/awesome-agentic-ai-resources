@@ -134,4 +134,49 @@ You only need a general understanding for now. APIs, webhooks and OAuth will eac
 
 - [Messaging Patterns Overview](https://www.enterpriseintegrationpatterns.com/patterns/messaging/) — Explains how messages are created, transported, routed, and transformed between applications.
 
+# REST APIs
 
+A REST API allows one software application to request data or actions from
+another application over HTTP.
+
+For example, an FDE might use an API to retrieve customer records, create a
+support ticket, update an order, or send information to an AI service.
+
+FDEs need REST API skills because APIs are one of the most common ways to
+connect products with customer systems.
+
+### What to Learn
+
+- Resources and endpoints
+- HTTP methods: `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`
+- Request headers, parameters, and JSON bodies
+- HTTP status codes
+- Authentication
+- Pagination and filtering
+- Rate limits
+- Timeouts and error handling
+- API documentation
+- API versioning
+
+#### Resources
+
+- [An Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview) — Introduces HTTP requests, responses, methods, headers, and status codes.
+
+- [Best Practices for RESTful Web API Design](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design) — Explains resource design, HTTP operations, pagination, versioning, and error handling.
+
+- [Getting Started with the GitHub REST API](https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api) — Demonstrates how to authenticate, send requests, use parameters, and process API responses.
+
+- [Postman: Send Your First API Request](https://learning.postman.com/docs/getting-started/first-steps/sending-the-first-request/) — A practical introduction to testing an API without first writing an application.
+
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) — A free practice API that can be used without creating an account.
+
+#### Practice
+
+Use JSONPlaceholder or another public API to:
+
+1. Send a `GET` request and retrieve a list of records.
+2. Retrieve one record using its identifier.
+3. Send a `POST` request containing JSON.
+4. Print the response status code and body.
+5. Handle an unsuccessful response without crashing.
+6. Explain what data was sent and received.
