@@ -83,3 +83,60 @@ You are ready for Week 1 when you can:
 
 
 ## Week 1 — Learn How Systems Talk
+> Learn how applications exchange data, react to events, manage permissions,
+> and store information.
+
+### Enterprise Integration
+
+Enterprise integration connects applications, services, and data sources so
+they can support one complete customer workflow.
+
+- [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/) — A collection of patterns for connecting applications through messages and workflows.
+- [Azure Integration Services](https://learn.microsoft.com/en-us/azure/architecture/integration/integration-services) — An overview of APIs, messaging, events, and workflow-based integration.
+
+### REST APIs
+
+REST APIs allow applications to request data or actions from other applications
+over HTTP.
+
+- [RESTful Web API Design](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design) — Guidance on resources, HTTP methods, status codes, pagination, versioning, and error handling.
+- [An Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview) — An introduction to HTTP requests, responses, headers, methods, and status codes.
+- [Postman Learning Center](https://learning.postman.com/docs/getting-started/overview/) — Practical documentation for creating, sending, and testing API requests.
+
+### Webhooks
+
+Webhooks notify an application when an event occurs instead of requiring it to
+continually check for updates.
+
+- [About Webhooks](https://docs.github.com/en/webhooks/about-webhooks) — GitHub’s introduction to webhook events, payloads, and deliveries.
+- [Best Practices for Using Webhooks](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks) — Covers secrets, validation, HTTPS, duplicate deliveries, redelivery, and asynchronous processing.
+- [Webhook.site](https://webhook.site/) — A browser-based tool for receiving and inspecting test webhook requests.
+
+### OAuth
+
+OAuth allows an application to access another service on a user’s behalf
+without receiving the user’s password.
+
+- [OAuth 2.0](https://oauth.net/2/) — An introduction to clients, access tokens, scopes, and authorization flows.
+- [Authorization Code Flow](https://oauth.net/2/grant-types/authorization-code/) — Explains the standard flow used when a user authorizes an application.
+- [Proof Key for Code Exchange](https://oauth.net/2/pkce/) — Explains how PKCE protects the Authorization Code flow.
+- [Microsoft Identity Platform Protocols](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols) — Practical documentation for OAuth 2.0 and OpenID Connect flows.
+
+### SQL
+
+SQL allows applications to store, retrieve, update, and relate structured data.
+
+- [PostgreSQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html) — The official introduction to tables, queries, joins, aggregates, foreign keys, and transactions.
+- [SQLBolt](https://sqlbolt.com/) — Interactive lessons for learning essential SQL operations.
+- [Select Star SQL](https://selectstarsql.com/) — An interactive SQL tutorial based on real-world datasets.
+
+### Practice Resources
+
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) — A free REST API for practising HTTP requests.
+- [Postman Echo](https://learning.postman.com/docs/developer/echo-api/) — Test endpoints for inspecting methods, headers, parameters, and authentication.
+- [DB Fiddle](https://www.db-fiddle.com/) — An online environment for creating database tables and testing SQL queries.
+
+### Week 1 Quest
+
+Build a small integration that receives a webhook, retrieves additional
+information from an API, and stores the result in a SQL database.
