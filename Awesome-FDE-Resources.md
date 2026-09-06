@@ -281,9 +281,26 @@ user permissions, identity providers, and sensitive customer data.
 
 #### Practice
 
-Create a diagram showing this authorization process:
+Create a diagram showing this authorization process like this:
 
-> User → Application → Authorization Server → Protected API
+```mermaid
+sequenceDiagram
+    actor User
+    participant App as Application
+    participant Auth as Authorization Server
+    participant API as Protected API
+
+    User->>App: Connect account
+    App->>Auth: Request authorization
+    Auth->>User: Ask for permission
+    User->>Auth: Approve requested access
+    Auth-->>App: Return authorization code
+    App->>Auth: Exchange code using PKCE
+    Auth-->>App: Issue access token
+    App->>API: Request data with access token
+    API-->>App: Return protected data
+    App-->>User: Show the result
+```
 
 Then use an OAuth-enabled test application to:
 
