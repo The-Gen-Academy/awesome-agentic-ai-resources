@@ -377,3 +377,5 @@ Then write queries that:
 
 Avoid building SQL queries by joining user-provided text directly into the
 query. Use parameterized queries to reduce the risk of SQL injection.
+
+
