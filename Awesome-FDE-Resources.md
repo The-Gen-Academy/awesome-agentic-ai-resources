@@ -182,3 +182,57 @@ Use JSONPlaceholder or another public API to:
 4. Print the response status code and body.
 5. Handle an unsuccessful response without crashing.
 6. Explain what data was sent and received.
+
+# Webhooks
+
+A webhook allows one application to notify another application immediately
+when an event occurs.
+
+Unlike an API request, where your application asks for information, a webhook
+sends information to your application automatically.
+
+For example:
+
+> A customer submits a support ticket → the ticketing system sends a webhook →
+> your application starts processing the ticket.
+
+FDEs need webhooks to build event-driven integrations that respond to customer
+activity in real time.
+
+#### What to Learn
+
+- Webhook events and payloads
+- Webhook endpoints
+- HTTP `POST` requests
+- Event types
+- Secrets and signature validation
+- Fast acknowledgement
+- Duplicate deliveries
+- Replay protection
+- Retries and redelivery
+- Asynchronous processing
+- Logging and monitoring
+
+#### Resources
+
+- [About Webhooks](https://docs.github.com/en/webhooks/about-webhooks) — Introduces webhook events, payloads, deliveries, and endpoints.
+
+- [Best Practices for Using Webhooks](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks) — Covers secrets, HTTPS, event validation, response timing, redelivery, and replay protection.
+
+- [Validating Webhook Deliveries](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries) — Explains how to verify that a webhook genuinely came from the expected sender.
+
+- [Handling Failed Webhook Deliveries](https://docs.github.com/en/webhooks/using-webhooks/handling-failed-webhook-deliveries) — Shows how failed events can be identified and delivered again.
+
+- [Webhook.site](https://webhook.site/) — Provides a temporary endpoint for receiving and inspecting webhook requests.
+
+#### Practice
+
+Use Webhook.site or a small local application to:
+
+1. Create an endpoint that accepts `POST` requests.
+2. Send a test webhook containing JSON.
+3. Read the event type and payload.
+4. Return a successful `2XX` response quickly.
+5. Detect when the same event is delivered twice.
+6. Reject a request with an invalid signature.
+7. Record enough information to investigate a failed delivery.
