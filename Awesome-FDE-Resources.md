@@ -378,4 +378,8 @@ Then write queries that:
 Avoid building SQL queries by joining user-provided text directly into the
 query. Use parameterized queries to reduce the risk of SQL injection.
 
+## Week 2 — Build Systems That Bounce Back
+
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/311701f0-e52a-4404-97a0-cdd3e83b0175" />
+
 
