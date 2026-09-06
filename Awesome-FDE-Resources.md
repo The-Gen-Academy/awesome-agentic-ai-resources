@@ -238,3 +238,61 @@ Use Webhook.site or a small local application to:
 5. Detect when the same event is delivered twice.
 6. Reject a request with an invalid signature.
 7. Record enough information to investigate a failed delivery.
+
+# OAuth
+
+OAuth is an authorization framework that allows one application to access
+another service on behalf of a user without receiving the user's password.
+
+For example, an FDE application might request permission to read tickets from
+a customer's support platform. The customer approves the request, and the
+platform gives the application a limited access token.
+
+FDEs need OAuth because most enterprise integrations involve protected APIs,
+user permissions, identity providers, and sensitive customer data.
+
+## What to Learn
+
+- Authorization versus authentication
+- Clients and authorization servers
+- Resource owners and protected APIs
+- Access tokens and refresh tokens
+- Permission scopes
+- Redirect URIs
+- Authorization Code flow
+- Proof Key for Code Exchange (PKCE)
+- Token expiration and revocation
+- Secure token storage
+- Service-to-service authorization
+- OAuth versus OpenID Connect
+
+#### Resources
+- [What is Oauth?](https://youtu.be/t4-416mg6iU?si=fyyImMgBlDln-YxK) — What is OAuth really all about, OAuth tutorial
+
+- [OAuth 2.0 Overview](https://oauth.net/2/) — Introduces OAuth roles, tokens, scopes, clients, and authorization flows.
+
+- [Authorization Code Flow](https://oauth.net/2/grant-types/authorization-code/) — Explains how users authorize an application to access their account or data.
+
+- [Proof Key for Code Exchange](https://oauth.net/2/pkce/) — Explains how PKCE protects the Authorization Code flow from intercepted or injected authorization codes.
+
+- [OAuth 2.1](https://oauth.net/2.1/) — Summarizes modern OAuth security practices and the removal of older, unsafe flows.
+
+- [Microsoft Identity Platform Protocols](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols) — Provides practical documentation for OAuth 2.0 and OpenID Connect flows.
+
+#### Practice
+
+Create a diagram showing this authorization process:
+
+> User → Application → Authorization Server → Protected API
+
+Then use an OAuth-enabled test application to:
+
+1. Redirect a user to an authorization page.
+2. Request only the scopes the application needs.
+3. Receive an authorization code through a redirect URI.
+4. Exchange the code for an access token using PKCE.
+5. Use the access token to call a protected API.
+6. Handle an expired or rejected token safely.
+
+Never place client secrets, access tokens, or refresh tokens in source code or
+commit them to GitHub.
