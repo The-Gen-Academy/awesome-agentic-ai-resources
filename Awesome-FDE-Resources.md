@@ -313,3 +313,67 @@ Then use an OAuth-enabled test application to:
 
 Never place client secrets, access tokens, or refresh tokens in source code or
 commit them to GitHub.
+
+# SQL
+
+SQL, or Structured Query Language, is used to store, retrieve, update, and
+relate information in a relational database.
+
+For example, an FDE might use SQL to combine customer records with support
+tickets, investigate failed transactions, or measure whether a deployed
+solution is producing the intended result.
+
+FDEs need SQL because customer data is frequently stored in relational
+databases, and understanding that data is essential for integrations,
+analytics, debugging, and production applications.
+
+## What to Learn
+
+- Tables, rows, and columns
+- Data types
+- Primary and foreign keys
+- `SELECT`, `INSERT`, `UPDATE`, and `DELETE`
+- Filtering with `WHERE`
+- Sorting and limiting results
+- `INNER JOIN` and `LEFT JOIN`
+- Aggregate functions
+- `GROUP BY`
+- Database constraints
+- Transactions
+- Indexes
+- Parameterized queries
+- Basic query performance
+
+#### Resources
+- [SQL Basics](https://youtu.be/7S_tz1z_5bA?si=TGy8l4hy8dvJvAlt) - SQL introduction and tutorial
+
+- [PostgreSQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html) — The official introduction to relational databases, SQL queries, joins, aggregates, foreign keys, and transactions.
+
+- [SQLBolt](https://sqlbolt.com/) — Provides short interactive lessons covering essential SQL concepts and queries.
+
+- [Select Star SQL](https://selectstarsql.com/) — An interactive SQL tutorial that uses real-world datasets.
+
+- [PostgreSQL SQL Language](https://www.postgresql.org/docs/current/sql.html) — A detailed reference for SQL syntax, data types, functions, queries, and database operations.
+
+- [DB Fiddle](https://www.db-fiddle.com/) — An online environment for creating tables and testing SQL queries without a local database.
+
+#### Practice
+
+Create two related tables:
+
+- `customers`
+- `support_tickets`
+
+Then write queries that:
+
+1. Add customers and support tickets.
+2. Retrieve all open tickets.
+3. Find every ticket belonging to a particular customer.
+4. Count tickets by status.
+5. Join customers with their tickets.
+6. Update a ticket from `open` to `resolved`.
+7. Perform two related updates inside a transaction.
+8. Safely handle user input with a parameterized query.
+
+Avoid building SQL queries by joining user-provided text directly into the
+query. Use parameterized queries to reduce the risk of SQL injection.
