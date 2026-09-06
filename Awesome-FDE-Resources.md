@@ -199,7 +199,7 @@ For example:
 FDEs need webhooks to build event-driven integrations that respond to customer
 activity in real time.
 
-#### What to Learn
+## What to Learn
 
 - Webhook events and payloads
 - Webhook endpoints
