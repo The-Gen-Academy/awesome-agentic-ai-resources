@@ -457,3 +457,50 @@ Create a background job that processes a support ticket:
 Do not place passwords, access tokens, or unnecessary customer data inside job
 payloads.
 
+### Retries
+
+A retry is a repeated attempt to complete an operation after a temporary
+failure.
+
+For example, if a customer API is briefly unavailable, an application can
+wait and try the request again instead of immediately abandoning the task.
+
+FDEs need to understand retries because networks, APIs, databases, and cloud
+services can fail temporarily. Carefully designed retries help integrations
+recover without manual intervention.
+
+#### What to Learn
+
+- Temporary versus permanent failures
+- Retryable and non-retryable errors
+- Retry limits
+- Timeouts
+- Exponential backoff
+- Jitter
+- Rate-limit responses
+- Idempotent operations
+- Dead-letter queues
+- Retry logging and monitoring
+
+#### Resources
+
+- [Computer Networks: Crash Course Computer Science #28](https://www.youtube.com/watch?v=3QhU9jd03a0) — Explains network failures, collisions, randomized waiting, and exponential backoff.
+
+- [Retry Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) — Introduces retry strategies, transient failures, retry limits, and situations where an operation should fail immediately.
+
+- [Timeouts, Retries, and Backoff with Jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) — Explains how Amazon designs retries without overwhelming a recovering service.
+
+- [Control and Limit Retry Calls](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_mitigate_interaction_failure_limit_retries.html) — Provides practical guidance on retry limits, exponential backoff, jitter, and testing.
+
+- [Transient Fault Handling](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults) — Explains how to identify temporary failures and select an appropriate retry strategy.
+
+#### Practice
+
+Create a program that calls a test API and:
+
+1. Retries temporary failures.
+2. Waits longer after every unsuccessful attempt.
+3. Adds a small random delay between attempts.
+4. stops after a defined number of retries.
+5. does not retry invalid requests or authorization failures.
+6. logs each attempt and the final result.
