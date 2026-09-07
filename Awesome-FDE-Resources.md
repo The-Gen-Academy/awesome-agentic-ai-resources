@@ -504,3 +504,51 @@ Create a program that calls a test API and:
 4. stops after a defined number of retries.
 5. does not retry invalid requests or authorization failures.
 6. logs each attempt and the final result.
+
+# Idempotency
+
+Idempotency means that repeating the same operation produces no additional
+effect after the first successful operation.
+
+For example, if a payment request is submitted twice with the same idempotency
+key, the customer should still be charged only once.
+
+FDEs need idempotency because API requests, webhook events, and background jobs
+can be delivered more than once. Without it, retries may create duplicate
+orders, records, notifications, or payments.
+
+#### What to Learn
+
+- Naturally idempotent HTTP methods
+- Idempotency keys
+- Duplicate request detection
+- Storing request results
+- Returning previous results
+- Request-key expiration
+- Concurrent duplicate requests
+- Idempotent event consumers
+- Database uniqueness constraints
+- Safe retries
+
+#### Resources
+
+- [What Is Idempotency?](https://cloud.google.com/discover/idempotency) — Introduces idempotency using APIs, payments, retries, and duplicate requests.
+
+- [Making Retries Safe with Idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/) — Explains how AWS uses client request identifiers to prevent repeated operations from creating additional effects.
+
+- [Idempotent Requests](https://docs.stripe.com/api/idempotent_requests) — Shows how a production payment API uses idempotency keys to make repeated requests safe.
+
+- [Make Mutating Operations Idempotent](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_prevent_interaction_failure_idempotent.html) — Provides implementation guidance for designing reliable idempotent operations.
+
+- [Build a Robust Payments Service Using Idempotency Keys](https://www.youtube.com/watch?v=m6DtqSb1BDM) — Explains how idempotency keys prevent duplicate payment processing.
+
+#### Practice
+
+Create an order endpoint that:
+
+1. Accepts an idempotency key with every order request.
+2. Stores the key, request information, and result.
+3. Creates the order when the key is new.
+4. Returns the original result when the same request is repeated.
+5. Rejects the key if it is reused with different request data.
+6. Prevents simultaneous requests from creating duplicate orders.
