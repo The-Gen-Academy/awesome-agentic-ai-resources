@@ -382,4 +382,77 @@ query. Use parameterized queries to reduce the risk of SQL injection.
 
 <img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/311701f0-e52a-4404-97a0-cdd3e83b0175" />
 
+# Background Jobs
 
+A background job is work that an application performs outside the main
+request-response cycle.
+
+Instead of making a user wait while a long task finishes, the application
+records the task, returns a response, and lets a separate worker process it.
+
+Common background jobs include:
+
+- Processing uploaded files
+- Sending emails and notifications
+- Synchronizing customer data
+- Generating reports
+- Running AI evaluations
+- Creating embeddings
+- Processing webhook events
+
+FDEs need background-job knowledge because customer integrations often involve
+slow, unreliable, or high-volume operations that should not block the main
+application.
+
+## How Background Jobs Work
+
+```mermaid
+flowchart LR
+    A[Application] --> B[Queue]
+    B --> C[Worker]
+    C --> D[Result]
+```
+
+The application places a job in a queue. A worker retrieves the job, performs
+the work, and records whether it succeeded or failed.
+
+#### What to Learn
+
+- Synchronous versus asynchronous processing
+- Tasks, queues, workers, and message brokers
+- Job identifiers and status tracking
+- Scheduled and delayed jobs
+- Job acknowledgements
+- Retries and timeouts
+- Failed jobs and dead-letter queues
+- Idempotent job processing
+- Logging and monitoring
+- Protecting sensitive job data
+
+#### Resources
+
+- [Asynchronous Communication](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-integrating-microservices/asynchronous.html) — Explains why asynchronous processing improves fault isolation, resource management, and handling of traffic spikes.
+
+- [Introduction to Celery](https://docs.celeryq.dev/en/stable/getting-started/introduction.html) — Introduces task queues, message brokers, workers, and distributed background processing with Python.
+
+- [First Steps with Celery](https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html) — A practical tutorial for creating a task, starting a worker, and tracking its result.
+
+- [Process Events Asynchronously](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/process-events-asynchronously-with-amazon-api-gateway-amazon-sqs-and-aws-fargate.html) — Demonstrates how an API can accept a job, place it in a queue, process it with a worker, and expose its status.
+
+- [What Is a Message Queue? — IBM Technology](https://www.youtube.com/watch?v=xErwDaOc-Gs) — A visual introduction to queues, producers, consumers, asynchronous messaging, and common business use cases.
+
+#### Practice
+
+Create a background job that processes a support ticket:
+
+1. Accept a support ticket through an API.
+2. Create a unique job identifier.
+3. Place the ticket-processing job in a queue.
+4. Return an `accepted` response without waiting for completion.
+5. Let a worker classify the ticket.
+6. Store the job status and result.
+7. Provide an endpoint for checking the job status.
+8. Record and expose a safe error when processing fails.
+
+Do not place passwords, access tokens, or unnecessary customer data inside job
+payloads.
