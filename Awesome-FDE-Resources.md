@@ -357,6 +357,65 @@ Before moving toward deployment, the FDE should have:
 
 ## Deploy into the Enterprise
 
+A solution that works in a development environment is not automatically ready
+for a customer’s organization.
+
+Enterprise deployment requires the FDE to adapt the solution to the customer’s
+infrastructure, identity systems, data policies, security requirements, and
+operating model.
+
+### Understand the Customer Environment
+
+Before deployment, determine:
+
+- Where the application and models will run
+- Whether the customer requires cloud, private-cloud, or self-hosted deployment
+- Which databases, applications, APIs, and legacy systems must be connected
+- How users and services will authenticate
+- Which permissions each user, tool, and agent should receive
+- What customer data may enter the model
+- Where prompts, responses, traces, and files will be stored
+- Which security, legal, compliance, and procurement reviews are required
+- Who will operate and support the solution after launch
+
+### Prepare for Production
+
+The deployment should include:
+
+- Separate development, testing, and production environments
+- Managed secrets and service identities
+- Least-privilege access controls
+- Encryption in transit and at rest
+- Input, output, and tool-action validation
+- Rate limits, timeouts, retries, and fallback behaviour
+- Versioned prompts, models, tools, and configuration
+- Monitoring for quality, latency, cost, errors, and security events
+- Audit logs for important actions
+- Rollback and incident-response procedures
+- Documented operational ownership
+
+### Roll Out Gradually
+
+Avoid immediately exposing an unproven AI system to every user or workflow.
+
+A controlled rollout may progress through:
+
+```text
+Internal testing
+→ Customer sandbox
+→ Shadow mode
+→ Human-approved pilot
+→ Limited production
+→ Wider rollout
+```
+### Resources
+
+- [API Deployment Checklist](https://developers.openai.com/api/docs/guides/deployment-checklist) — OpenAI’s checklist for preparing model-powered applications for production, including security, access control, monitoring, reliability, latency, and cost.
+
+- [AI Workload Documentation](https://learn.microsoft.com/en-us/azure/well-architected/ai/) — Microsoft’s architecture guidance for designing and operating reliable, secure, cost-effective, and observable AI workloads.
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — A framework for identifying, assessing, governing, and managing AI risks throughout the system lifecycle.
+  
 ## Drive Adoption
 
 ## Measure Business Outcomes
