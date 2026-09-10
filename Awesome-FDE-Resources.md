@@ -270,6 +270,91 @@ Before implementation, document:
   
 ## Build and Evaluate
 
+An FDE should build the smallest end-to-end version of the solution that can
+be tested inside a realistic customer workflow.
+
+The objective is not merely to produce a convincing demonstration. The FDE
+must determine whether the system performs the intended task consistently,
+handles important failures, and improves the customer outcome defined earlier.
+
+### Build a Vertical Slice
+
+The first implementation should connect the essential parts of the solution:
+
+- A representative user input
+- Relevant customer data and context
+- The selected model or agent
+- Required tools and integrations
+- A usable output or completed action
+- Human review where necessary
+- Logging of model responses, tool calls, errors, latency, and cost
+
+Use real or representative examples early. Artificial examples may hide the
+language, exceptions, incomplete data, and operational constraints present in
+the customer’s environment.
+
+### Define the Evaluation Set
+
+Create a collection of test cases that includes:
+
+- Common customer tasks
+- Important edge cases
+- Previously observed failures
+- Ambiguous or incomplete inputs
+- Unsafe or adversarial inputs
+- Tool and integration failures
+- Cases that require human escalation
+- Cases where the system should refuse or take no action
+
+Each test case should have clear success criteria based on the customer’s
+workflow and expected outcome.
+
+### Choose Evaluation Methods
+
+| Method | Best Used For |
+| --- | --- |
+| Deterministic checks | Formats, required fields, calculations, and tool outcomes |
+| Reference-answer comparison | Tasks with known correct answers |
+| Human evaluation | Usefulness, judgment, tone, and domain-specific quality |
+| Model-based grading | Applying a defined rubric across many outputs |
+| Trace review | Examining an agent’s decisions, tool calls, and intermediate steps |
+| Outcome verification | Confirming that the intended real-world state was achieved |
+
+Do not rely on one score alone. Combine automated evaluation with domain-expert
+review and realistic workflow testing.
+
+### Iterate Through Failures
+
+For each meaningful failure:
+
+1. Record the input, context, output, and execution trace.
+2. Classify the cause of the failure.
+3. Add the example to the evaluation set.
+4. Change the prompt, context, tools, model, or workflow.
+5. Run the complete evaluation set again.
+6. Check that the change did not introduce regressions elsewhere.
+
+### Build and Evaluation Output
+
+Before moving toward deployment, the FDE should have:
+
+- A working end-to-end solution
+- A representative evaluation dataset
+- Defined quality and safety criteria
+- Baseline evaluation results
+- Documented failure categories
+- Tested human-review and escalation paths
+- Recorded latency and cost measurements
+- Evidence that the solution is ready for a limited customer pilot
+
+### Resources
+
+- [Working with Evals](https://developers.openai.com/api/docs/guides/evals) — Practical documentation for creating test datasets, defining evaluation criteria, running evaluations, and comparing system changes.
+
+- [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — A detailed guide to tasks, trials, graders, traces, outcomes, capability evaluations, and regression testing for agentic systems.
+
+- [Production ML Systems: Deployment Testing](https://developers.google.com/machine-learning/crash-course/production-ml-systems/deployment-testing) — Explains why production AI systems require testing beyond model quality, including pipelines, serving infrastructure, and integration behaviour.
+
 ## Deploy into the Enterprise
 
 ## Drive Adoption
