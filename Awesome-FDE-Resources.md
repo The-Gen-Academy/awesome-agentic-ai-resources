@@ -190,7 +190,84 @@ Before designing the system, summarize the opportunity:
 - [Define What Success Looks Like](https://www.gov.uk/service-manual/service-standard/point-10-define-success-publish-performance-data) — Guidance for selecting measures that demonstrate whether a service is solving its intended problem.
   
 ## Design the AI Solution
+Once an opportunity is selected, the FDE designs how AI will fit into the
+customer’s workflow.
 
+The goal is not to make every step intelligent or autonomous. Predictable
+steps should remain deterministic, while AI should be used where the task
+requires interpreting unstructured information, handling ambiguity, or making
+context-dependent decisions.
+
+### Decompose the Workflow
+
+Break the proposed workflow into individual tasks and identify:
+
+- The input and expected output of each task
+- Steps that can use deterministic rules or traditional software
+- Steps that require model judgment
+- Information the model needs
+- External systems the solution must access
+- Actions the system may perform
+- Decisions requiring human approval
+- Conditions that should stop or escalate the workflow
+
+### Choose the Appropriate Pattern
+
+| Pattern | Appropriate When |
+| --- | --- |
+| Prompted model | One model response can complete the task |
+| Structured output | The result must follow a predictable schema |
+| Retrieval-augmented generation | The model needs customer or domain knowledge |
+| Tool-using workflow | The system must retrieve data or perform defined actions |
+| Deterministic orchestration | The sequence of steps must remain predictable |
+| Agent | The system must decide which steps or tools to use dynamically |
+| Human-in-the-loop | Errors or actions could have significant consequences |
+
+Start with the simplest pattern capable of meeting the customer’s requirements.
+Additional autonomy also introduces additional evaluation, security, and
+operational complexity.
+
+### Design Decisions
+
+The FDE should define:
+
+- Model inputs and expected outputs
+- Required customer context and grounding data
+- Model and provider constraints
+- Available tools and their permissions
+- Workflow state and completion conditions
+- Data retention and privacy requirements
+- Human-review and escalation points
+- Acceptable latency and operating cost
+- Expected failure modes and fallback behaviour
+- Initial evaluation criteria
+
+### Solution Design Brief
+
+Before implementation, document:
+
+> **The solution uses [AI capability] to perform [specific tasks] within
+> [customer workflow]. It receives [inputs and context], may use [tools and
+> systems], and produces [expected output or action]. Deterministic software
+> controls [predictable steps], while human approval is required for
+> [high-risk decisions]. The solution succeeds when [evaluation criteria] are
+> met within [latency, cost, and safety constraints].**
+
+### Resources
+
+- [A Practical Guide to Building AI Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) — Explains when an agent is appropriate, how models, tools, and instructions fit together, and where guardrails and human intervention are required.
+
+- [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents) — Distinguishes fixed workflows from autonomous agents and recommends beginning with simple, composable patterns.
+
+- [Application Design for AI Workloads](https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design) — Architecture guidance covering AI application layers, deterministic orchestration, agents, knowledge sources, tools, and nonfunctional requirements.
+
+### Cohort-Based Learning
+
+- [Mastering Agentic AI](https://maven.com/aishwarya-srinivasan/mastering-ai-agents) — A cohort-based program covering
+  LLM application foundations, RAG and context engineering, agent architectures, MCP and A2A, orchestration frameworks, fine-tuning, local models, AI evaluations, observability, security, and production readiness.
+  Availability and enrollment dates may vary.
+  *Created by [THE GEN ACADEMY], the maintainers of this collection.*
+  
 ## Build and Evaluate
 
 ## Deploy into the Enterprise
