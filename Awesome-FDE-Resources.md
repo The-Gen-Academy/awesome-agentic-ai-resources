@@ -20,6 +20,7 @@
 - [Technical Foundations](#technical-foundations)
 
 ## What Is a Forward Deployed Engineer?
+
 A Forward Deployed Engineer works closely with customers to understand
 important operational problems and build solutions that create measurable
 business value.
@@ -134,6 +135,60 @@ Customer discovery should produce:
 
 ## Frame the Opportunity
 
+After discovering the customer’s problem, an FDE must decide whether it
+represents a valuable and feasible opportunity—especially whether AI is an
+appropriate part of the solution.
+
+This stage converts discovery findings into a focused use case that the
+customer and delivery team can evaluate.
+
+### What the FDE Defines
+
+- The users and workflow being addressed
+- The business impact of the current problem
+- The specific task AI might perform
+- Why AI is preferable to rules, automation, or process improvement
+- The data and system access required
+- Expected quality, latency, cost, and safety requirements
+- Human-review and escalation requirements
+- Technical and organizational risks
+- A small first deployment or pilot
+- Measurable success and stop criteria
+
+### Opportunity Assessment
+
+Evaluate each proposed use case across:
+
+| Dimension | Question |
+| --- | --- |
+| User value | Does this solve an important user problem? |
+| Business impact | Will it save time, reduce cost, increase revenue, or reduce risk? |
+| AI suitability | Does the task benefit from language, reasoning, generation, or classification? |
+| Data readiness | Is relevant, lawful, and sufficiently reliable data available? |
+| Technical feasibility | Can it integrate with the customer’s existing environment? |
+| Risk | What happens when the system produces an incorrect result? |
+| Adoption | Will users trust it and incorporate it into their workflow? |
+| Measurability | Can improvement be demonstrated using agreed metrics? |
+| Reusability | Could the solution or its components benefit other customers? |
+
+### Opportunity Brief
+
+Before designing the system, summarize the opportunity:
+
+> **For [target users], we will improve [existing workflow] by using AI to
+> [specific task]. We expect to improve [business or user measure] from
+> [baseline] to [target]. The initial scope includes [boundaries], requires
+> [data and integrations], and will use [human oversight] to manage
+> [principal risks].**
+
+### Resources
+
+- [Identifying and Scaling AI Use Cases](https://openai.com/business/guides-and-resources/identifying-and-scaling-ai-use-cases/) — A practical guide to finding AI opportunities in business workflows and prioritizing them using expected impact and implementation effort.
+
+- [Project Poster](https://www.atlassian.com/team-playbook/plays/project-poster) — A collaborative method for documenting the problem, assumptions, possible solutions, scope, and intended result before committing to delivery.
+
+- [Define What Success Looks Like](https://www.gov.uk/service-manual/service-standard/point-10-define-success-publish-performance-data) — Guidance for selecting measures that demonstrate whether a service is solving its intended problem.
+  
 ## Design the AI Solution
 
 ## Build and Evaluate
