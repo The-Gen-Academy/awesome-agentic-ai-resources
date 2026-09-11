@@ -203,3 +203,83 @@ Guidance for defining measurable outcomes before delivery begins.
 Useful for ensuring an FDE engagement is evaluated based on changes to the
 customer's workflow or business outcome rather than whether a technically
 impressive system was built.
+
+## 3. Solution Design
+
+Once the customer problem is clear, an FDE needs to decide how the solution
+should actually work.
+
+The goal is not to make every step autonomous or AI-powered. Good solution
+design means choosing the simplest architecture that can reliably solve the
+customer's problem.
+
+This includes:
+
+* Breaking workflows into individual tasks
+* Identifying deterministic vs model-driven steps
+* Choosing between prompting, RAG, tools, workflows, and agents
+* Designing human-review and escalation points
+* Defining model inputs, outputs, and context
+* Planning integrations and permissions
+* Considering latency, cost, reliability, and safety
+* Anticipating failure modes and fallback behavior
+
+### Resources
+
+#### [A Practical Guide to Building AI Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)
+
+**Type:** Guide
+**Level:** Beginner–Intermediate
+**Focus:** Agent design
+
+Explains when an agent is appropriate, how models, tools, and instructions
+fit together, and how to think about guardrails and human intervention.
+
+Useful for FDEs deciding whether a customer workflow actually requires an
+agent or can be solved with a simpler architecture.
+
+---
+
+#### [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
+
+**Type:** Engineering guide
+**Level:** Intermediate
+**Focus:** Workflows vs agents
+
+Distinguishes predictable workflows from more autonomous agents and recommends
+starting with simple, composable patterns before adding unnecessary complexity.
+
+Especially useful for FDEs because customer problems often do not require
+fully autonomous systems.
+
+---
+
+#### [Application Design for AI Workloads](https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design)
+
+**Type:** Architecture guide
+**Level:** Intermediate–Advanced
+**Focus:** Production AI architecture
+
+Covers the architectural components of AI applications, including models,
+orchestration, knowledge sources, tools, agents, and supporting application
+layers.
+
+Useful for moving from a proof of concept to a system that can fit into a
+customer's broader technical environment.
+
+---
+
+### Cohort-Based Learning
+
+#### [Mastering Agentic AI](https://maven.com/aishwarya-srinivasan/mastering-ai-agents)
+
+**Type:** Cohort-based course
+**Level:** Intermediate
+**Focus:** Production AI systems
+
+Covers LLM application foundations, RAG and context engineering, agent
+architectures, orchestration, MCP and A2A, evaluations, observability,
+security, and production readiness.
+
+*Created by The Gen Academy, the maintainers of this resource collection.*
+
