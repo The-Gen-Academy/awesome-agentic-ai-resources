@@ -1,1247 +1,704 @@
 # Awesome FDE Resources
 
-> A curated collection of resources for Forward Deployed Engineers who
-> discover customer problems and deliver production AI solutions.
+> A curated collection of resources for Forward Deployed Engineers who discover customer problems, build production systems, integrate them into real environments, and deliver measurable business outcomes.
+
+Forward Deployed Engineering sits at the intersection of:
+
+* Customer discovery
+* Software and AI engineering
+* Enterprise integrations
+* Production deployment
+* Stakeholder communication
+* Product judgment
+* Adoption
+* Business impact
+* Field-to-product learning
+
+This collection is organized around the actual journey of taking a customer problem from ambiguity to production.
+
+**Last reviewed:** September 2026
+
+---
+
+## How to Use This Collection
+
+You do not need to complete every resource.
+
+If you are new to Forward Deployed Engineering, a useful path is:
+
+**Understand the role → Discover the problem → Design the solution → Build & evaluate → Integrate → Deploy → Drive adoption → Measure impact → Generalize what you learn**
+
+Use the **Core Resources** to understand each stage.
+
+Use the **Technical Foundations** and **FDE Toolbox** when you need implementation depth.
+
+Use the **FDE Playbook** as a practical checklist while working on an engagement.
+
+---
+
+## The FDE Journey
+
+```mermaid
+flowchart LR
+    A["Discover"] --> B["Frame"]
+    B --> C["Design"]
+    C --> D["Build"]
+    D --> E["Integrate"]
+    E --> F["Deploy"]
+    F --> G["Drive Adoption"]
+    G --> H["Measure"]
+    H --> I["Generalize"]
+```
+
+---
 
 ## Contents
 
-1. Understanding the FDE Role
-2. Customer Discovery & Problem Framing
-3. Solution Design
-4. Building & Evals
-5. Integrations & Enterprise Engineering
-6. Production & Deployment
-7. Working With Customers & Stakeholders
-8. Adoption & Change Management
-9. Measuring Business Impact
-10. Turning Field Learning Into Product
-11. FDE Case Studies
-12. FDE Careers & Interviews
-13. Technical Foundations
-14. FDE Playbook
-
-## 1. Understanding the FDE Role
-
-Forward Deployed Engineers work closely with customers to turn ambiguous,
-high-value problems into production systems.
-
-The role sits at the intersection of:
-
-- Customer discovery
-- Software and AI engineering
-- Enterprise deployment
-- Product judgment
-- Stakeholder communication
-- Adoption and measurable business outcomes
-
-Unlike a traditional software engineering role, the work does not end when
-code ships. FDEs stay close to the customer, learn from real deployments,
-and feed those learnings back into the product.
-
-### Resources
-
-#### [Palantir — Forward Deployed Engineering](https://www.palantir.com/docs/foundry/architecture-center/overview)
-
-**Type:** Primary source  
-**Level:** Beginner  
-**Focus:** FDE philosophy
-
-A useful introduction to the original Forward Deployed Engineering model.
-It explains how engineers work close to real operational problems and use
-what they learn in the field to shape the core product
+1. [Understanding the FDE Role](#1-understanding-the-fde-role)
+2. [Customer Discovery & Problem Framing](#2-customer-discovery--problem-framing)
+3. [Solution Design](#3-solution-design)
+4. [Building & Evals](#4-building--evals)
+5. [Integrations & Enterprise Engineering](#5-integrations--enterprise-engineering)
+6. [Production & Deployment](#6-production--deployment)
+7. [Working With Customers & Stakeholders](#7-working-with-customers--stakeholders)
+8. [Adoption & Change Management](#8-adoption--change-management)
+9. [Measuring Business Impact](#9-measuring-business-impact)
+10. [Turning Field Learning Into Product](#10-turning-field-learning-into-product)
+11. [FDE Case Studies & Reference Implementations](#11-fde-case-studies--reference-implementations)
+12. [FDE Careers & Interviews](#12-fde-careers--interviews)
+13. [Technical Foundations](#13-technical-foundations)
+14. [FDE Playbook](#14-fde-playbook)
 
 ---
 
-#### [OpenAI — Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-sf-san-francisco/)
+# 1. Understanding the FDE Role
 
-**Type:** Role overview  
-**Level:** Beginner  
-**Focus:** Modern AI FDE
+Forward Deployed Engineers work closely with customers to turn ambiguous, high-value problems into production systems.
 
-Shows what FDE work looks like in an AI company today: discovery, technical
-scoping, system design, building, production rollout, adoption, evaluation,
-and feeding deployment learnings back into product and research.
+Unlike a traditional engineering role where ownership may end when a feature ships, FDEs often remain close to deployment, adoption, customer outcomes, and the lessons that should feed back into the product.
 
----
+### Core Resources
 
-#### [Vannevar Labs — Forward Deployed Engineering](https://vannevarlabs.com/blog/forward-deployed-engineering/)
-
-**Type:** Engineering article  
-**Level:** Beginner–Intermediate  
-**Focus:** Embedded engineering
-
-Explains why engineers need to embed with users to understand what should
-actually be built, and how customer understanding can drive new products.
+| Resource                                                                                                                                          | Type                | Why it belongs                                                                                                                      | Covers                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| [Forward Deployed Engineering — Palantir](https://www.palantir.com/docs/foundry/architecture-center/overview)                                     | Primary source      | Introduces one of the original Forward Deployed Engineering models and the relationship between field work and product development. | FDE philosophy, customer proximity, product feedback  |
+| [Forward Deployed Engineer — OpenAI](https://openai.com/careers/forward-deployed-engineer-%28fde%29-sf-san-francisco/)                            | Role overview       | Shows what modern AI-focused FDE work looks like across discovery, design, deployment, evaluation, and adoption.                    | Discovery, scoping, implementation, rollout, outcomes |
+| [Forward Deployed Engineering — Vannevar Labs](https://vannevarlabs.com/blog/forward-deployed-engineering/)                                       | Engineering article | Explains why engineers embed with users and how field understanding can shape products.                                             | Embedded engineering, iteration, product learning     |
+| [The Definitive Guide to Forward Deployed Engineering — Vinoo Ganesh](https://nextplayso.substack.com/p/the-definitive-guide-to-forward-deployed) | Practitioner guide  | Practitioner perspective on the operating model, responsibilities, and common misconceptions around FDE.                            | Customer ownership, career, FDE operating model       |
 
 ---
 
-#### [The Definitive Guide to Forward Deployed Engineering](https://nextplayso.substack.com/p/the-definitive-guide-to-forward-deployed)
+# 2. Customer Discovery & Problem Framing
 
-**Type:** Practitioner guide  
-**Level:** Beginner–Intermediate  
-**Focus:** FDE operating model
+Before designing a solution, an FDE needs to understand how the customer currently works, where the real problem occurs, and why solving it matters.
 
-A practitioner perspective from the former leader of Palantir's Project
-Frontline program, covering what FDEs actually do, why the model works,
-and common misconceptions about the role.
+Good discovery separates requested features from underlying needs and turns vague problems into measurable opportunities.
 
-## 2. Customer Discovery & Problem Framing
+### Core Resources
 
-Before designing a solution, an FDE needs to understand how the customer
-currently works, where the real problem occurs, and why solving it matters.
-
-This includes:
-
-* Understanding users and stakeholders
-* Mapping existing workflows
-* Identifying pain points and bottlenecks
-* Separating symptoms from root causes
-* Understanding technical and organizational constraints
-* Defining measurable outcomes
-* Deciding whether AI is actually appropriate
-
-### Resources
-
-#### [Learning About Users and Their Needs](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs)
-
-**Type:** Guide
-**Level:** Beginner
-**Focus:** User research
-
-A practical introduction to understanding what users are trying to accomplish
-before deciding what should be built. Useful for avoiding the common mistake
-of treating a customer's requested feature as the underlying problem.
+| Resource                                                                                                                                       | Type      | Why it belongs                                                                                          | Covers                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| [Learning About Users and Their Needs — GOV.UK](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs)                  | Guide     | Helps distinguish actual user needs from requested features.                                            | User research, needs, outcomes          |
+| [Writing an Effective Guide for a User Interview — Nielsen Norman Group](https://www.nngroup.com/articles/interview-guide/)                    | Guide     | Practical guidance for preparing open-ended stakeholder interviews.                                     | Interview questions, follow-ups, bias   |
+| [Creating an Experience Map — GOV.UK](https://www.gov.uk/service-manual/user-research/creating-an-experience-map/)                             | Guide     | Helps map how work moves across users, teams, tools, and dependencies.                                  | Workflow mapping, pain points, handoffs |
+| [5 Whys Analysis — Atlassian](https://www.atlassian.com/team-playbook/plays/5-whys)                                                            | Framework | Useful for moving from visible symptoms toward underlying causes.                                       | Root-cause analysis                     |
+| [Framework for Innovation — Design Council](https://www.designcouncil.org.uk/resources/framework-for-innovation/)                              | Framework | Introduces the Double Diamond approach for exploring ambiguous problems before committing to solutions. | Discover, define, develop, deliver      |
+| [Identifying and Scaling AI Use Cases — OpenAI](https://openai.com/business/guides-and-resources/identifying-and-scaling-ai-use-cases/)        | Guide     | Helps assess where AI can create meaningful business value.                                             | AI suitability, prioritization, impact  |
+| [Project Poster — Atlassian](https://www.atlassian.com/team-playbook/plays/project-poster)                                                     | Framework | Helps teams align on the problem, assumptions, scope, and intended outcome.                             | Problem framing, scope, alignment       |
+| [Define What Success Looks Like — GOV.UK](https://www.gov.uk/service-manual/service-standard/point-10-define-success-publish-performance-data) | Guide     | Encourages measurable outcomes to be defined before implementation.                                     | Success metrics, baselines, outcomes    |
 
 ---
 
-#### [Writing an Effective Guide for a User Interview](https://www.nngroup.com/articles/interview-guide/)
+# 3. Solution Design
 
-**Type:** Guide
-**Level:** Beginner
-**Focus:** Stakeholder interviews
+Once the customer problem is clear, the FDE needs to decide how the solution should actually work.
 
-Explains how to prepare open-ended interview questions, organize an interview
-guide, use follow-up questions, and avoid leading participants toward a
-particular answer.
+The goal is not maximum autonomy. The goal is the simplest architecture capable of solving the customer's problem reliably.
 
----
+### Core Resources
 
-#### [Creating an Experience Map](https://www.gov.uk/service-manual/user-research/creating-an-experience-map/)
-
-**Type:** Guide
-**Level:** Beginner–Intermediate
-**Focus:** Workflow mapping
-
-Shows how to map a user's journey across actions, pain points, teams, systems,
-and dependencies. Useful for FDEs trying to understand how work actually moves
-through an organization before introducing automation or AI.
-
----
-
-#### [5 Whys Analysis](https://www.atlassian.com/team-playbook/plays/5-whys)
-
-**Type:** Framework
-**Level:** Beginner
-**Focus:** Root-cause analysis
-
-A simple technique for repeatedly asking why a problem occurs in order to move
-past visible symptoms and identify the underlying cause.
-
----
-
-#### [Framework for Innovation — Double Diamond](https://www.designcouncil.org.uk/resources/framework-for-innovation/)
-
-**Type:** Framework
-**Level:** Beginner–Intermediate
-**Focus:** Problem framing
-
-Introduces the Double Diamond approach: explore the problem broadly, define the
-right challenge, develop possible solutions, and test them.
-
-Useful for FDEs working with ambiguous customer requests where the original
-problem statement may change as more context is discovered.
-
----
-
-#### [Identifying and Scaling AI Use Cases](https://openai.com/business/guides-and-resources/identifying-and-scaling-ai-use-cases/)
-
-**Type:** Guide
-**Level:** Beginner–Intermediate
-**Focus:** AI opportunity identification
-
-A practical guide for identifying areas where AI can create meaningful
-business value and prioritizing use cases based on their potential impact.
-
-Useful after customer discovery when deciding whether the problem actually
-benefits from AI and which opportunity is worth pursuing first.
-
----
-
-#### [Project Poster](https://www.atlassian.com/team-playbook/plays/project-poster)
-
-**Type:** Framework
-**Level:** Beginner
-**Focus:** Opportunity framing
-
-A collaborative framework for documenting the problem, assumptions, possible
-solutions, scope, and intended outcome before committing significant
-engineering effort.
-
-Useful for turning discovery findings into a shared problem statement that
-customer and engineering teams can align around.
-
----
-
-#### [Define What Success Looks Like](https://www.gov.uk/service-manual/service-standard/point-10-define-success-publish-performance-data)
-
-**Type:** Guide
-**Level:** Beginner
-**Focus:** Success metrics
-
-Guidance for defining measurable outcomes before delivery begins.
-
-Useful for ensuring an FDE engagement is evaluated based on changes to the
-customer's workflow or business outcome rather than whether a technically
-impressive system was built.
-
-## 3. Solution Design
-
-Once the customer problem is clear, an FDE needs to decide how the solution
-should actually work.
-
-The goal is not to make every step autonomous or AI-powered. Good solution
-design means choosing the simplest architecture that can reliably solve the
-customer's problem.
-
-This includes:
-
-* Breaking workflows into individual tasks
-* Identifying deterministic vs model-driven steps
-* Choosing between prompting, RAG, tools, workflows, and agents
-* Designing human-review and escalation points
-* Defining model inputs, outputs, and context
-* Planning integrations and permissions
-* Considering latency, cost, reliability, and safety
-* Anticipating failure modes and fallback behavior
-
-### Resources
-
-#### [A Practical Guide to Building AI Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)
-
-**Type:** Guide
-**Level:** Beginner–Intermediate
-**Focus:** Agent design
-
-Explains when an agent is appropriate, how models, tools, and instructions
-fit together, and how to think about guardrails and human intervention.
-
-Useful for FDEs deciding whether a customer workflow actually requires an
-agent or can be solved with a simpler architecture.
-
----
-
-#### [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
-
-**Type:** Engineering guide
-**Level:** Intermediate
-**Focus:** Workflows vs agents
-
-Distinguishes predictable workflows from more autonomous agents and recommends
-starting with simple, composable patterns before adding unnecessary complexity.
-
-Especially useful for FDEs because customer problems often do not require
-fully autonomous systems.
-
----
-
-#### [Application Design for AI Workloads](https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design)
-
-**Type:** Architecture guide
-**Level:** Intermediate–Advanced
-**Focus:** Production AI architecture
-
-Covers the architectural components of AI applications, including models,
-orchestration, knowledge sources, tools, agents, and supporting application
-layers.
-
-Useful for moving from a proof of concept to a system that can fit into a
-customer's broader technical environment.
-
----
+| Resource                                                                                                                                      | Type               | Why it belongs                                                                                     | Covers                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [A Practical Guide to Building AI Agents — OpenAI](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) | Guide              | Helps decide when an agent is appropriate and where guardrails or human intervention are required. | Agents, models, tools, instructions, guardrails |
+| [Building Effective Agents — Anthropic](https://www.anthropic.com/engineering/building-effective-agents)                                      | Engineering guide  | Strong explanation of workflows versus agents and why simple patterns should come first.           | Routing, workflows, orchestration, agents       |
+| [Application Design for AI Workloads — Microsoft](https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design)             | Architecture guide | Expands the design problem beyond the model to the entire production application.                  | Models, orchestration, knowledge, tools, agents |
+| [Effective Context Engineering for AI Agents — Anthropic](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)  | Engineering guide  | Explains how context selection and retrieval affect agent reliability.                             | Context, memory, retrieval, tools               |
+| [A Visual Guide to Attention Variants in Modern LLMs — Sebastian Raschka](https://magazine.sebastianraschka.com/p/visual-attention-variants)  | Technical guide    | Useful when model architecture or inference constraints materially affect a design decision.       | MHA, GQA, MLA, model architecture               |
 
 ### Cohort-Based Learning
 
-#### [Mastering Agentic AI](https://maven.com/aishwarya-srinivasan/mastering-ai-agents)
+| Resource                                                                           | Type                | Why it belongs                                                                          | Covers                                                       |
+| ---------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Mastering Agentic AI](https://maven.com/aishwarya-srinivasan/mastering-ai-agents) | Cohort-based course | End-to-end program covering modern AI application engineering and production readiness. | RAG, agents, MCP, evals, observability, security, production |
 
-**Type:** Cohort-based course
-**Level:** Intermediate
-**Focus:** Production AI systems
-
-Covers LLM application foundations, RAG and context engineering, agent
-architectures, orchestration, MCP and A2A, evaluations, observability,
-security, and production readiness.
-
-*Created by The Gen Academy, the maintainers of this resource collection.*
-
-## 4. Building & Evals
-
-An FDE should build the smallest end-to-end version of a solution that can be
-tested inside a realistic customer workflow.
-
-The goal is not just to create a convincing demo. The system needs to perform
-the intended task reliably, handle important failure cases, and improve the
-customer outcome it was designed for.
-
-This includes:
-
-* Building a small end-to-end vertical slice
-* Testing with realistic customer inputs
-* Creating representative evaluation datasets
-* Defining clear success criteria
-* Testing tool calls and integrations
-* Reviewing agent traces and outcomes
-* Identifying and classifying failures
-* Turning failures into regression tests
-* Measuring latency and cost
-* Re-running evals as the system changes
-
-### Resources
-
-#### [Working with Evals](https://developers.openai.com/api/docs/guides/evals)
-
-**Type:** Documentation
-**Level:** Intermediate
-**Focus:** Building evaluation workflows
-
-A practical guide to creating evaluation datasets, defining evaluation
-criteria, running evals, and comparing different versions of an AI system.
-
-Useful for FDEs who need to turn customer requirements and observed failures
-into repeatable tests before deploying changes.
+*Created by The Gen Academy, the maintainers of this collection.*
 
 ---
 
-#### [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+# 4. Building & Evals
 
-**Type:** Engineering guide
-**Level:** Intermediate–Advanced
-**Focus:** Agent evaluation
+FDEs should build the smallest end-to-end version of a solution that can be tested inside a realistic customer workflow.
 
-A detailed guide to evaluating agentic systems using tasks, trials, graders,
-execution traces, and real-world outcomes.
+The objective is not merely to build a convincing demo. The system needs to perform the intended task consistently, handle important failures, and improve the outcome it was designed for.
 
-Particularly useful for FDEs building systems that call tools or take actions,
-where evaluating only the final model response may miss important failures.
+### Core Resources
 
----
+| Resource                                                                                                                                                   | Type               | Why it belongs                                                                              | Covers                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [Working with Evals — OpenAI](https://developers.openai.com/api/docs/guides/evals)                                                                         | Documentation      | Practical starting point for defining datasets, criteria, graders, and comparisons.         | Eval datasets, graders, experiments       |
+| [Demystifying Evals for AI Agents — Anthropic](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)                                     | Engineering guide  | Strong framework for evaluating agents beyond final-answer quality.                         | Tasks, trials, graders, traces, outcomes  |
+| [Production ML Systems: Deployment Testing — Google](https://developers.google.com/machine-learning/crash-course/production-ml-systems/deployment-testing) | Engineering guide  | Shows why production testing includes pipelines and infrastructure, not only model quality. | Integration testing, pipelines, serving   |
+| [LLM-as-a-Judge: Complete Guide — Hamel Husain](https://hamel.dev/blog/posts/llm-judge/)                                                                   | Practitioner guide | Practical guidance for using model-based grading without blindly trusting it.               | Rubrics, judge design, calibration, bias  |
+| [LLM Evals FAQ — Hamel Husain](https://hamel.dev/blog/posts/evals-faq/)                                                                                    | Reference          | Covers common implementation questions around eval-driven development.                      | Error analysis, sample size, monitoring   |
+| [Agent Trajectory Evaluations — LangSmith](https://docs.langchain.com/langsmith/trajectory-evals)                                                          | Documentation      | Useful for evaluating the sequence of tool calls an agent takes.                            | Trajectory evaluation, tool calls, traces |
 
-#### [Production ML Systems: Deployment Testing](https://developers.google.com/machine-learning/crash-course/production-ml-systems/deployment-testing)
+### Practical Tools
 
-**Type:** Engineering guide
-**Level:** Intermediate
-**Focus:** End-to-end system testing
-
-Explains why production AI and ML systems need testing beyond model quality,
-including input validation, infrastructure compatibility, pipeline integration,
-and end-to-end testing.
-
-Useful for FDEs because failures in customer deployments often happen at the
-boundaries between models, data, infrastructure, and external systems rather
-than inside the model itself.
-
-## 5. Integrations & Enterprise Engineering
-
-FDEs rarely build systems in isolation. A solution usually needs to connect
-with the customer's existing APIs, databases, applications, identity systems,
-and internal infrastructure.
-
-Strong integration design means understanding not only how two systems connect,
-but how the connection behaves when authentication expires, requests fail,
-events arrive twice, schemas change, or one system becomes unavailable.
-
-This includes:
-
-* APIs and service integration
-* Authentication and authorization
-* OAuth and permissions
-* Webhooks and event-driven systems
-* Data synchronization
-* Retries and idempotency
-* Rate limits and timeouts
-* Legacy and enterprise systems
-* Integration failure handling
-* AI tool and MCP integrations
-
-### Resources
-
-#### [Determine Integration Requirements — Microsoft](https://learn.microsoft.com/en-us/power-platform/architecture/key-concepts/integration-patterns/requirements)
-
-**Type:** Architecture guide
-**Level:** Intermediate
-**Focus:** Integration design
-
-Provides a structured way to evaluate an integration based on data volume,
-frequency, direction of data flow, and the capabilities of each connected
-system.
-
-Useful for FDEs because integration design should begin with customer and
-system constraints rather than immediately choosing an API or architecture.
+| Tool                                                 | Best for                                                  |
+| ---------------------------------------------------- | --------------------------------------------------------- |
+| [Promptfoo](https://github.com/promptfoo/promptfoo)  | Prompt, model, agent, and red-team testing                |
+| [DeepEval](https://github.com/confident-ai/deepeval) | LLM and agent evaluation in Python                        |
+| [Ragas](https://github.com/explodinggradients/ragas) | RAG and agent evaluation                                  |
+| [Langfuse](https://github.com/langfuse/langfuse)     | Tracing, prompt management, evaluation, and observability |
+| [Arize Phoenix](https://github.com/Arize-ai/phoenix) | Open-source tracing, evaluation, and AI debugging         |
 
 ---
 
-#### [Enterprise Integration Patterns — Gregor Hohpe & Bobby Woolf](https://www.enterpriseintegrationpatterns.com/)
+# 5. Integrations & Enterprise Engineering
 
-**Type:** Reference / Book
-**Level:** Intermediate–Advanced
-**Focus:** Enterprise messaging patterns
+FDEs rarely build systems in isolation.
 
-A foundational collection of patterns for connecting applications using
-messaging and asynchronous communication.
+Solutions usually need to connect with customer APIs, databases, SaaS applications, identity systems, internal tools, and legacy infrastructure.
 
-Useful for understanding recurring integration problems such as message
-routing, transformation, delivery, coordination, and communication between
-systems that were not originally designed to work together.
+Strong integration design also considers what happens when tokens expire, events arrive twice, requests fail, schemas change, or one dependency becomes unavailable.
 
----
+### Core Resources
 
-#### [Best Practices for Using Webhooks — GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks)
-
-**Type:** Documentation
-**Level:** Intermediate
-**Focus:** Event-driven integrations
-
-Covers practical webhook concerns including event filtering, secrets,
-verification, fast acknowledgement, redelivery, and protecting against
-duplicate or replayed events.
-
-Useful for FDEs building integrations where customer systems need to react
-reliably to events from external applications.
+| Resource                                                                                                                                                       | Type               | Why it belongs                                                                    | Covers                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | --------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| [Determine Integration Requirements — Microsoft](https://learn.microsoft.com/en-us/power-platform/architecture/key-concepts/integration-patterns/requirements) | Architecture guide | Helps choose integration patterns based on real system constraints.               | Volume, frequency, directionality, system capability     |
+| [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/)                                                                              | Book / Reference   | Foundational catalogue of recurring enterprise integration problems and patterns. | Messaging, routing, transformation, asynchronous systems |
+| [Best Practices for Using Webhooks — GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks)                             | Documentation      | Covers practical reliability concerns in event-driven integrations.               | Verification, secrets, redelivery, duplicates            |
+| [Idempotent Requests — Stripe](https://docs.stripe.com/api/idempotent_requests)                                                                                | Documentation      | Explains how operations can be safely retried without accidental duplication.     | Idempotency, retries, API safety                         |
+| [Authorization Code Flow with PKCE — Auth0](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)        | Documentation      | Useful foundation for understanding modern SaaS and API authorization.            | OAuth, PKCE, access tokens                               |
+| [Model Context Protocol — Architecture](https://modelcontextprotocol.io/specification/architecture)                                                            | Protocol docs      | Important for AI systems that need standardized access to tools and data.         | MCP hosts, clients, servers, tools, resources            |
+| [OpenAI Function Calling](https://developers.openai.com/api/docs/guides/function-calling)                                                                      | Documentation      | Covers the mechanics behind structured model-to-tool interactions.                | Tool schemas, arguments, function calls                  |
+| [Writing Effective Tools for AI Agents — Anthropic](https://www.anthropic.com/engineering/writing-tools-for-agents)                                            | Engineering guide  | Shows how tool interface design affects agent reliability.                        | Tool naming, responses, context efficiency               |
 
 ---
 
-#### [Idempotent Requests — Stripe](https://docs.stripe.com/api/idempotent_requests)
+# 6. Production & Deployment
 
-**Type:** Documentation
-**Level:** Intermediate
-**Focus:** Reliable API calls
+A system that works in a demo or development environment is not automatically ready for a customer's organization.
 
-Explains how idempotency keys allow an application to safely retry an
-operation without accidentally performing the same action multiple times.
+FDEs need to think about security, reliability, observability, rollout, recovery, cost, and operational ownership.
 
-This is especially important for FDEs building agents or automated workflows
-that can trigger real-world actions such as creating records, sending
-requests, or modifying customer systems.
+### Core Resources
 
----
-
-#### [Authorization Code Flow with PKCE — Auth0](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)
-
-**Type:** Documentation
-**Level:** Intermediate
-**Focus:** Authentication and authorization
-
-Explains the OAuth Authorization Code Flow with Proof Key for Code Exchange
-and how applications securely obtain authorization to access APIs.
-
-Useful for understanding the authentication layer behind many SaaS and
-enterprise API integrations.
+| Resource                                                                                                                                                  | Type               | Why it belongs                                                           | Covers                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- |
+| [API Deployment Checklist — OpenAI](https://developers.openai.com/api/docs/guides/deployment-checklist)                                                   | Deployment guide   | Practical checklist for taking AI applications into production.          | Security, rate limits, latency, cost, reliability    |
+| [Design Principles for AI Workloads — Microsoft](https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles)                           | Architecture guide | Applies production architecture principles specifically to AI workloads. | Reliability, security, cost, operations, performance |
+| [Monitoring Distributed Systems — Google SRE](https://sre.google/sre-book/monitoring-distributed-systems/)                                                | Engineering guide  | Foundational reference for production monitoring.                        | Latency, traffic, errors, saturation                 |
+| [Update a Deployment Without Downtime — Kubernetes](https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/)                          | Tutorial           | Demonstrates gradual rollout and rollback practices.                     | Rolling updates, releases, rollback                  |
+| [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)                                                                | Framework          | Structured approach for managing AI risk across the system lifecycle.    | Govern, map, measure, manage                         |
+| [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)                                          | Security reference | Baseline reference for common security risks in LLM applications.        | Prompt injection, data exposure, excessive agency    |
+| [Practical LLM Security Advice from the NVIDIA AI Red Team](https://developer.nvidia.com/blog/practical-llm-security-advice-from-the-nvidia-ai-red-team/) | Engineering guide  | Practical production security lessons for LLM systems.                   | RAG access, injection, sandboxing, controls          |
 
 ---
 
-#### [Model Context Protocol — Architecture](https://modelcontextprotocol.io/specification/architecture)
-
-**Type:** Protocol documentation
-**Level:** Intermediate
-**Focus:** AI tool integrations
-
-Introduces the architecture behind MCP and how AI applications can connect
-to external tools, resources, and systems through a standardized protocol.
-
-Useful for FDEs building AI systems that need structured access to customer
-applications, data sources, and internal tools.
-
-## 6. Production & Deployment
-
-A solution that works in a demo or development environment is not automatically
-ready for a customer's organization.
-
-FDEs need to turn prototypes into systems that are secure, observable,
-reliable, and maintainable inside the customer's real environment.
-
-This includes:
-
-* Development, staging, and production environments
-* Secrets and identity management
-* Access controls and least privilege
-* Data security and privacy
-* Rate limits, retries, and fallbacks
-* Logging, monitoring, and observability
-* Reliability and failure recovery
-* Versioning and rollback
-* Gradual production rollout
-* Incident response
-* Operational ownership
-* AI risk management
-
-### Resources
-
-#### [API Deployment Checklist — OpenAI](https://developers.openai.com/api/docs/guides/deployment-checklist)
-
-**Type:** Deployment guide
-**Level:** Intermediate
-**Focus:** Production AI applications
-
-A practical checklist for taking an AI application into production, covering
-security, API access, reliability, latency, cost, rate limits, and operational
-considerations.
-
-Useful for FDEs moving from a working prototype to a customer-facing production
-system where reliability and operational constraints matter.
-
----
-
-#### [Design Principles for AI Workloads — Microsoft Azure](https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles)
-
-**Type:** Architecture guide
-**Level:** Intermediate–Advanced
-**Focus:** Production AI architecture
-
-Applies the Azure Well-Architected principles of reliability, security, cost
-optimization, operational excellence, and performance efficiency specifically
-to AI workloads.
-
-Useful for thinking beyond model quality and considering the complete system
-that needs to operate reliably inside an enterprise environment.
-
----
-
-#### [Monitoring Distributed Systems — Google SRE](https://sre.google/sre-book/monitoring-distributed-systems/)
-
-**Type:** Engineering guide
-**Level:** Intermediate
-**Focus:** Monitoring and observability
-
-Introduces fundamental principles for monitoring production systems, including
-latency, traffic, errors, and saturation.
-
-Useful for FDEs because once a solution is deployed, teams need visibility into
-whether the system is healthy, how users are experiencing it, and where failures
-are occurring.
-
----
-
-#### [Update a Deployment Without Downtime — Kubernetes](https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/)
-
-**Type:** Documentation / Tutorial
-**Level:** Intermediate
-**Focus:** Rollouts and rollback
-
-Demonstrates how rolling deployments can introduce new application versions
-gradually while maintaining availability, as well as how to roll back when a
-release causes problems.
-
-Useful for understanding an important production principle: deployments should
-be reversible rather than one-way changes to a customer's environment.
-
----
-
-#### [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-
-**Type:** Framework
-**Level:** Intermediate–Advanced
-**Focus:** AI risk and governance
-
-A framework for identifying, assessing, governing, and managing risks associated
-with AI systems throughout their lifecycle.
-
-Useful for FDEs working with enterprise customers where production deployment
-may involve security, privacy, governance, compliance, safety, and organizational
-risk requirements.
-
-## 7. Working With Customers & Stakeholders
+# 7. Working With Customers & Stakeholders
 
 Forward Deployed Engineering is not only about building the right system.
-FDEs also need to keep users, technical teams, decision-makers, and internal
-partners aligned while the solution is being developed and deployed.
 
-This means translating between business problems and technical decisions,
-setting expectations, communicating trade-offs, gathering feedback, and
-maintaining trust when requirements or constraints change.
+FDEs also need to keep users, engineers, executives, security teams, product teams, and internal partners aligned while the solution is being designed and deployed.
 
-This includes:
+### Core Resources
 
-* Technical discovery conversations
-* Stakeholder identification and alignment
-* Setting expectations and communication cadence
-* Explaining technical trade-offs
-* Running project kickoffs
-* Demonstrating work in progress
-* Gathering and responding to feedback
-* Communicating blockers and risks
-* Working across engineering, product, sales, and customer teams
-* Keeping stakeholders aligned as scope changes
-
-### Resources
-
-#### [A Guide for Successful Client Assessments and Discoveries — Thoughtworks](https://www.thoughtworks.com/en-in/insights/blog/digital-innovation/client-assessments-discoveries-part-1-people)
-
-**Type:** Practitioner guide
-**Level:** Intermediate
-**Focus:** Client engagement and stakeholder alignment
-
-Covers the people side of technical customer engagements, including identifying
-stakeholders, agreeing on expectations, defining roles and responsibilities,
-establishing communication cadence, and maintaining transparency.
-
-Useful for FDEs because successful customer work depends on getting access to
-the right people and keeping technical and business stakeholders aligned
-throughout an engagement.
+| Resource                                                                                                                                                                                     | Type               | Why it belongs                                                                | Covers                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------- | ------------------------------------------------ |
+| [A Guide for Successful Client Assessments and Discoveries — Thoughtworks](https://www.thoughtworks.com/en-in/insights/blog/digital-innovation/client-assessments-discoveries-part-1-people) | Practitioner guide | Strong guidance on the people side of technical customer engagements.         | Stakeholders, roles, expectations, communication |
+| [Stakeholder Communication Plan — Atlassian](https://www.atlassian.com/team-playbook/plays/stakeholder-communications-plan)                                                                  | Framework          | Helps decide who needs which information and how frequently.                  | Communication cadence, stakeholder mapping       |
+| [Project Kickoff — Atlassian](https://www.atlassian.com/team-playbook/plays/project-kickoff)                                                                                                 | Framework          | Useful for aligning sponsors, customers, and delivery teams before execution. | Goals, roles, ownership, expectations            |
+| [Run Effective Demo Meetings — Atlassian](https://www.atlassian.com/team-playbook/plays/run-demo-meetings)                                                                                   | Practical guide    | Treats demos as feedback and alignment tools rather than presentations.       | Demos, feedback, iteration                       |
+| [End-to-End Demo — Atlassian](https://www.atlassian.com/team-playbook/plays/end-to-end-demo)                                                                                                 | Framework          | Encourages complete workflow validation early.                                | User flows, integration issues, feedback         |
 
 ---
 
-#### [Stakeholder Project Communication Plan — Atlassian](https://www.atlassian.com/team-playbook/plays/stakeholder-communications-plan)
+# 8. Adoption & Change Management
 
-**Type:** Framework
-**Level:** Beginner–Intermediate
-**Focus:** Stakeholder communication
+A technically successful deployment does not create value if people do not actually use it.
 
-Provides a practical framework for identifying who needs to be involved or
-informed, what information each group needs, which communication channels to
-use, and how frequently updates should happen.
+FDEs need to understand adoption barriers, help users transition from existing workflows, and ensure the new system becomes part of normal work.
 
-Useful for FDEs managing deployments involving customer engineers, end users,
-executives, security teams, product teams, and other stakeholders with very
-different information needs.
+### Core Resources
 
----
-
-#### [Project Kickoff — Atlassian](https://www.atlassian.com/team-playbook/plays/project-kickoff)
-
-**Type:** Framework
-**Level:** Beginner
-**Focus:** Project alignment
-
-Provides a structure for getting project sponsors, delivery teams, and
-stakeholders aligned on goals, responsibilities, expectations, and how the
-project will operate.
-
-Useful at the beginning of an FDE engagement to make sure both the customer and
-delivery team understand what is being built, why it matters, who owns which
-decisions, and how progress will be evaluated.
+| Resource                                                                                                                                                                                                           | Type                 | Why it belongs                                                                      | Covers                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [Define a Strategy for Adoption and Change Management — Microsoft](https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/implementation-strategy-define-strategy-adoption-change-management) | Implementation guide | Explains why technically successful projects can fail when adoption is weak.        | Sponsorship, engagement, communication               |
+| [The Prosci ADKAR Model](https://www.prosci.com/methodology/adkar)                                                                                                                                                 | Framework            | Useful for diagnosing why individuals are not adopting a change.                    | Awareness, desire, knowledge, ability, reinforcement |
+| [Encouraging People to Use Your Digital Service — GOV.UK](https://www.gov.uk/service-manual/helping-people-to-use-your-service/encouraging-people-to-use-your-digital-service)                                     | Service-design guide | Encourages teams to research real adoption barriers instead of assuming resistance. | Trust, awareness, usability, confidence              |
+| [Measuring Digital Take-Up — GOV.UK](https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up)                                                                                                | Measurement guide    | Shows how to establish a baseline and track adoption over time.                     | Usage, take-up, baseline                             |
+| [Change Management Communication — Atlassian](https://www.atlassian.com/team-playbook/plays/change-management-communication-with-video)                                                                            | Framework            | Helps communicate what is changing, why, and how users are affected.                | Change communication, feedback                       |
+| [Manage Changes During Transition and Handover — Microsoft](https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/change-management-transition-handover)                                     | Implementation guide | Covers long-term ownership after implementation.                                    | Handover, training, support, sustained adoption      |
 
 ---
 
-#### [Run Effective Demo Meetings — Atlassian](https://www.atlassian.com/team-playbook/plays/run-demo-meetings)
+# 9. Measuring Business Impact
 
-**Type:** Practical guide
-**Level:** Beginner
-**Focus:** Customer demos and feedback
+An FDE engagement succeeds when the deployed system improves a real customer outcome.
 
-Explains how to structure demos so they show tangible progress, gather useful
-feedback, align stakeholders around goals, and identify necessary changes.
+Usage and technical quality matter, but they are not the final measure of value.
 
-Useful for FDEs because customer demos should not simply showcase technology.
-They are opportunities to validate whether the solution actually fits the
-workflow and expectations discovered earlier.
+### Core Resources
 
----
-
-#### [End-to-End Demo — Atlassian](https://www.atlassian.com/team-playbook/plays/end-to-end-demo)
-
-**Type:** Framework
-**Level:** Beginner–Intermediate
-**Focus:** Iterative customer feedback
-
-Encourages teams to demonstrate the complete user experience early and
-repeatedly rather than waiting until individual components are polished.
-
-Useful for FDEs because showing an end-to-end workflow often exposes missing
-requirements, integration problems, and incorrect assumptions much earlier
-than reviewing individual features in isolation.
-
-## 8. Adoption & Change Management
-
-A technically successful deployment does not create value if people do not
-actually use it.
-
-FDEs need to understand why users adopt or reject a new system, help teams
-transition from existing workflows, and make sure the solution becomes part
-of normal day-to-day work.
-
-This includes:
-
-* Understanding barriers to adoption
-* Communicating why the change matters
-* Training users and support teams
-* Building confidence and trust
-* Supporting users during rollout
-* Collecting feedback from real usage
-* Measuring adoption
-* Identifying workflow friction
-* Reinforcing new ways of working
-* Sustaining adoption after launch
-
-### Resources
-
-#### [Define a Strategy for Adoption and Change Management — Microsoft](https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/implementation-strategy-define-strategy-adoption-change-management)
-
-**Type:** Implementation guide
-**Level:** Intermediate
-**Focus:** Adoption strategy
-
-Explains why technically successful projects can still fail to deliver business
-value when users do not adopt the new system.
-
-Covers executive sponsorship, employee engagement, communication, project-team
-involvement, and the relationship between user experience and successful
-technology adoption.
-
-Useful for FDEs because deployment success should be measured by whether the
-solution becomes useful inside the customer's real workflow, not simply whether
-it goes live.
+| Resource                                                                                                                                                                                                               | Type               | Why it belongs                                                             | Covers                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------- | -------------------------------------------- |
+| [How to Set Performance Metrics for Your Service — GOV.UK](https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service)                                                        | Measurement guide  | Helps define intended outcomes and baselines before delivery.              | Metrics, hypotheses, baselines               |
+| [Using Performance Data to Improve Your Service — GOV.UK](https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction)                                                      | Measurement guide  | Connects operational metrics to whether a service is helping users.        | Completion, satisfaction, cost, adoption     |
+| [A Scorecard for the AI Age — OpenAI](https://openai.com/index/a-scorecard-for-the-ai-age/)                                                                                                                            | Business framework | Encourages measuring useful work and economics rather than usage alone.    | Task completion, quality, cost, productivity |
+| [From Promise to Impact: Measuring the Full Value of AI — McKinsey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/from-promise-to-impact-how-companies-can-measure-and-realize-the-full-value-of-ai) | Business framework | Connects technical and adoption metrics to strategic and financial impact. | ROI, revenue, cost, business outcomes        |
+| [How Evals Drive the Next Chapter in AI for Businesses — OpenAI](https://openai.com/index/evals-drive-next-chapter-of-ai/)                                                                                             | Guide              | Connects evaluation criteria with business objectives.                     | Specify, measure, improve                    |
 
 ---
 
-#### [The Prosci ADKAR Model](https://www.prosci.com/methodology/adkar)
+# 10. Turning Field Learning Into Product
 
-**Type:** Change management framework
-**Level:** Beginner–Intermediate
-**Focus:** Individual adoption
+One of the most distinctive parts of Forward Deployed Engineering is what happens after solving an individual customer's problem.
 
-Introduces the ADKAR model:
+FDEs are close enough to deployments to identify recurring problems, missing product capabilities, reusable architectures, integration patterns, and model limitations.
 
-* Awareness
-* Desire
-* Knowledge
-* Ability
-* Reinforcement
+### Core Resources
 
-The framework helps explain why users may resist or fail to adopt a new system
-even when the technology itself works.
-
-Useful for FDEs diagnosing whether an adoption problem comes from lack of
-understanding, motivation, training, capability, or reinforcement.
+| Resource                                                                                                                       | Type                     | Why it belongs                                                                        | Covers                                  |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------------------------------- | --------------------------------------- |
+| [Forward Deployed Engineering — Palantir](https://www.palantir.com/docs/foundry/architecture-center/overview)                  | Primary source           | Explains the field-to-product feedback loop at the center of FDE.                     | Customer feedback, product development  |
+| [Introducing OpenAI Frontier](https://openai.com/index/introducing-openai-frontier/)                                           | Primary source           | Shows how enterprise deployments can create feedback loops into product and research. | Enterprise agents, deployment learning  |
+| [Forward Deployed Software Engineer — OpenAI](https://openai.com/careers/forward-deployed-software-engineer-sf-san-francisco/) | Role overview            | Describes building reusable abstractions from customer problems.                      | Reusable components, internal knowledge |
+| [Who Are Palantir FDEs? — Palantir Developer Community](https://community.palantir.com/t/who-are-palantir-fdes/6847/4)         | Practitioner perspective | Useful explanation of why FDE is more than last-mile implementation.                  | Customer outcomes, platform feedback    |
 
 ---
 
-#### [Encouraging People to Use Your Digital Service — GOV.UK](https://www.gov.uk/service-manual/helping-people-to-use-your-service/encouraging-people-to-use-your-digital-service)
+# 11. FDE Case Studies & Reference Implementations
 
-**Type:** Service design guide
-**Level:** Beginner
-**Focus:** Adoption barriers
+The best case studies show more than which model or framework was used.
 
-Recommends researching people who are not using a new service rather than
-assuming why adoption is low.
+Look for the full lifecycle:
 
-Covers common barriers such as lack of awareness, difficulty using the system,
-lack of confidence, concerns about security, and preference for existing
-workflows.
+**Problem → Constraints → Architecture → Integration → Evaluation → Deployment → Adoption → Outcome**
 
-Useful for FDEs because poor adoption can reveal problems in the product,
-workflow, training, or trust rather than simple resistance to change.
+## Deployment Case Studies
 
----
+| Resource                                                                                                    | Type                    | Why it belongs                                                                    | Covers                                  |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------- | --------------------------------------------------------------------------------- | --------------------------------------- |
+| [OpenAI Frontier — Enterprise Agent Deployments](https://openai.com/index/introducing-openai-frontier/)     | Deployment examples     | Shows AI systems embedded into important enterprise workflows.                    | Enterprise agents, deployment, outcomes |
+| [Block — Internal AI Deployment](https://www.anthropic.com/customers/block)                                 | Case study              | Connects internal tools and data with organization-wide AI usage.                 | Internal agents, productivity, adoption |
+| [Harvey — AI for Complex Legal Workflows](https://www.anthropic.com/customers/harvey)                       | Case study              | Strong high-stakes example requiring human review and enterprise controls.        | Legal AI, HITL, compliance, security    |
+| [Decagon — AI Customer Support Agents](https://www.anthropic.com/customers/decagon)                         | Case study              | Shows agents connected with existing customer systems and business logic.         | Tools, customer support, workflows      |
+| [Sendbird — Enterprise AI Customer Service](https://www.anthropic.com/customers/sendbird)                   | Case study              | Useful example of production reliability and scale.                               | Customer service, scale, reliability    |
+| [Forward Deployed Engineering — Vannevar Labs](https://vannevarlabs.com/blog/forward-deployed-engineering/) | Practitioner case study | Shows why an organization introduced FDE as customer and product complexity grew. | Embedded engineering, scaling FDE       |
 
-#### [Measuring Digital Take-Up — GOV.UK](https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up)
+## Reference Implementations & Starter Repositories
 
-**Type:** Measurement guide
-**Level:** Beginner–Intermediate
-**Focus:** Adoption metrics
-
-Explains how to establish a baseline and measure how many users move toward a
-new digital workflow over time.
-
-Useful for FDEs because adoption should be measured rather than inferred from
-successful deployment or positive stakeholder feedback.
-
----
-
-#### [Change Management Communication — Atlassian](https://www.atlassian.com/team-playbook/plays/change-management-communication-with-video)
-
-**Type:** Practical framework
-**Level:** Beginner
-**Focus:** Communicating change
-
-Provides a simple structure for explaining what is changing, why the change
-matters, how users will be affected, what success looks like, and where users
-can provide feedback.
-
-Useful during an FDE rollout because users are more likely to adopt a new
-workflow when they understand both the reason for the change and how it affects
-their daily work.
+| Resource                                                                                     | Type                      | Why it belongs                                                                       | Covers                                     |
+| -------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------ |
+| [Google Cloud Generative AI](https://github.com/GoogleCloudPlatform/generative-ai)           | GitHub repository         | Large collection of production-oriented generative AI examples and notebooks.        | RAG, agents, Vertex AI, multimodal         |
+| [Google Cloud Agent Starter Pack](https://github.com/GoogleCloudPlatform/agent-starter-pack) | Starter repository        | Useful starting point for production-oriented agent projects.                        | Agent architecture, deployment, evaluation |
+| [12-Factor Agents](https://github.com/humanlayer/12-factor-agents)                           | Engineering guide / Repo  | Applies production-software principles to agentic systems.                           | Reliability, context, control flow, tools  |
+| [LangGraph](https://github.com/langchain-ai/langgraph)                                       | Framework                 | Reference implementation for stateful, controllable agent workflows.                 | State, persistence, HITL, orchestration    |
+| [MCP Reference Servers](https://github.com/modelcontextprotocol/servers)                     | Reference implementations | Examples of connecting AI systems to real tools and data through MCP.                | MCP servers, resources, tools              |
+| [OpenAI Cookbook](https://github.com/openai/openai-cookbook)                                 | Example repository        | Practical implementation examples across model capabilities and production patterns. | APIs, tools, RAG, agents, evals            |
 
 ---
 
-#### [Manage Changes During Transition and Handover — Microsoft](https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/change-management-transition-handover)
+# 12. FDE Careers & Interviews
 
-**Type:** Implementation guide
-**Level:** Intermediate
-**Focus:** Sustaining adoption
+FDE interviews often evaluate a broader combination of engineering, customer reasoning, deployment judgment, ambiguity handling, and ownership than traditional software engineering interviews.
 
-Covers the transition from implementation to ongoing operation, including
-knowledge transfer, training support teams, measuring usage, addressing
-technology and process barriers, and sustaining the change after go-live.
+### Core Resources
 
-Useful for FDEs preparing to move from hands-on deployment work toward long-term
-customer ownership of the system.
-
-## 9. Measuring Business Impact
-
-An FDE engagement is successful only if the deployed system improves a real
-customer outcome.
-
-Technical quality and adoption matter, but they are not the final measure of
-success. FDEs need to connect the system's performance to changes in the
-customer's workflow, operating costs, revenue, risk, or user experience.
-
-This includes:
-
-* Defining success before deployment
-* Establishing a baseline
-* Measuring workflow outcomes
-* Tracking time saved and productivity gains
-* Measuring cost reduction or revenue impact
-* Evaluating completion and error rates
-* Measuring quality alongside speed
-* Comparing outcomes before and after deployment
-* Tracking total cost of operation
-* Connecting technical metrics to business KPIs
-
-### Resources
-
-#### [How to Set Performance Metrics for Your Service — GOV.UK](https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service)
-
-**Type:** Measurement guide
-**Level:** Beginner–Intermediate
-**Focus:** Metrics and baselines
-
-Explains how to start from the purpose of a service, define intended benefits,
-turn those benefits into measurable hypotheses, and establish meaningful
-performance metrics.
-
-It also emphasizes establishing a baseline so improvements can be compared
-against the previous workflow rather than judged in isolation.
-
-Useful for FDEs because success metrics should be defined before a solution is
-built, not added after deployment.
+| Resource                                                                                                               | Type                         | Why it belongs                                                                         | Covers                                        |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------- |
+| [OpenAI — Forward Deployed Engineering Careers](https://openai.com/careers/search/?q=forward+deployed)                 | Career resource              | Useful for seeing current expectations for AI-focused FDE roles.                       | Roles, responsibilities, locations            |
+| [Forward Deployed Engineer — OpenAI](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/)  | Role description             | Helps reverse-engineer the competencies expected from a modern FDE.                    | Engineering, scoping, deployment, adoption    |
+| [How We Build — Vannevar Labs](https://vannevarlabs.com/careers/how-we-build/)                                         | Engineering careers resource | Shows how embedded engineering differs from a traditional software environment.        | Field deployment, operator-facing engineering |
+| [The Forward Deployed Engineer Guide — FDEInterviews](https://www.fdeinterviews.com/guide)                             | Career guide                 | Dedicated overview of FDE skills, companies, and interview processes.                  | Career path, role types, interviews           |
+| [FDE Interview Practice — FDEInterviews](https://www.fdeinterviews.com/)                                               | Interview practice           | FDE-specific practice rather than generic SWE questions.                               | Technical, product, customer reasoning        |
+| [OpenAI FDE Interview Guide — Exponent](https://www.tryexponent.com/guides/openai-forward-deployed-engineer-interview) | Interview guide              | Covers coding, system design, customer reasoning, projects, and behavioral interviews. | Interview preparation                         |
+| [Forward Deployed Engineer Interview Guide — Plank](https://joinplank.com/forward-deployed-engineer/interview-guide)   | Interview guide              | Useful framing around build, embed, and own.                                           | Production judgment, ownership, customer work |
 
 ---
 
-#### [Using Performance Data to Improve Your Service — GOV.UK](https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction)
+# 13. Technical Foundations
 
-**Type:** Measurement guide
-**Level:** Beginner
-**Focus:** Operational outcomes
+Forward Deployed Engineers do not need identical technical backgrounds.
 
-Introduces practical metrics such as cost per transaction, user satisfaction,
-completion rate, and adoption.
+However, strong foundations make it much easier to work quickly inside unfamiliar customer environments.
 
-Useful for FDEs because it connects usage data to whether a service is actually
-helping users complete work more successfully and efficiently.
+These resources are references rather than a strict curriculum.
 
 ---
 
-#### [A Scorecard for the AI Age — OpenAI](https://openai.com/index/a-scorecard-for-the-ai-age/)
+## 13.1 Software, APIs & Systems
 
-**Type:** Business framework
-**Level:** Intermediate
-**Focus:** AI economics and productivity
-
-Proposes evaluating AI based on the amount of useful work completed rather than
-relying only on traditional software metrics such as seats or active users.
-
-It focuses on questions such as:
-
-* How much useful work gets completed?
-* What does a successful task cost?
-* How often is the work correct?
-* Does the economics improve as usage grows?
-
-Useful for FDEs connecting model or agent performance to the economic value
-created for the customer.
+| Resource                                                                          | Type          | Why it belongs                                                                    | Covers                                          |
+| --------------------------------------------------------------------------------- | ------------- | --------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [Designing Data-Intensive Applications](https://dataintensive.net/)               | Book          | Strong foundation for reasoning about real production systems and trade-offs.     | Data systems, reliability, scalability          |
+| [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/) | Reference     | Useful catalogue for recurring integration problems.                              | Messaging, routing, transformations             |
+| [Google SRE Book](https://sre.google/sre-book/table-of-contents/)                 | Book          | Practical foundations for operating reliable systems.                             | Reliability, monitoring, incidents, capacity    |
+| [Kubernetes Documentation](https://kubernetes.io/docs/home/)                      | Documentation | Useful reference when deployments run in containerized enterprise infrastructure. | Containers, deployments, networking, operations |
 
 ---
 
-#### [From Promise to Impact: How Companies Can Measure the Full Value of AI — McKinsey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/from-promise-to-impact-how-companies-can-measure-and-realize-the-full-value-of-ai)
+## 13.2 LLM Fundamentals
 
-**Type:** Business framework
-**Level:** Intermediate–Advanced
-**Focus:** Enterprise AI value
-
-Introduces a layered approach for measuring AI initiatives from technical
-performance and user engagement through strategic outcomes and financial
-impact.
-
-Examples include revenue growth, cost-to-serve reduction, margin improvement,
-and total cost of ownership.
-
-Useful for FDEs working with enterprise stakeholders who need evidence that an
-AI deployment is producing measurable business value rather than simply
-achieving technical milestones.
+| Resource                                                                                          | Type         | Why it belongs                                                 | Covers                                                    |
+| ------------------------------------------------------------------------------------------------- | ------------ | -------------------------------------------------------------- | --------------------------------------------------------- |
+| [Intro to Large Language Models — Andrej Karpathy](https://www.youtube.com/watch?v=zjkBMFhNj_g)   | Video        | One of the clearest practitioner introductions to modern LLMs. | Tokens, training, inference, RLHF, scaling                |
+| [Attention Is All You Need](https://arxiv.org/abs/1706.03762)                                     | Paper        | Foundational Transformer paper.                                | Self-attention, multi-head attention, positional encoding |
+| [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)  | Visual guide | Excellent visual companion to the Transformer paper.           | Attention, Q/K/V, Transformer flow                        |
+| [Deep Dive into LLMs like ChatGPT — Andrej Karpathy](https://www.youtube.com/watch?v=7xTGNNLPyMI) | Video        | End-to-end explanation of modern LLM development.              | Pretraining, post-training, tools, hallucinations         |
+| [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1)                     | Course       | Practical introduction to open-source LLM tooling.             | Transformers, tokenizers, pipelines                       |
 
 ---
 
-#### [How Evals Drive the Next Chapter in AI for Businesses — OpenAI](https://openai.com/index/evals-drive-next-chapter-of-ai/)
+## 13.3 RAG & Context Engineering
 
-**Type:** Business and evaluation guide
-**Level:** Intermediate
-**Focus:** Connecting evals to business objectives
-
-Explains a simple cycle:
-
-**Specify → Measure → Improve**
-
-The idea is to define what a good business outcome looks like, test the system
-under realistic conditions, and improve it based on observed failures.
-
-Useful for FDEs because evaluation criteria should ultimately reflect what the
-customer considers successful rather than only model-level benchmarks.
-
-## 10. Turning Field Learning Into Product
-
-One of the most distinctive parts of Forward Deployed Engineering is what
-happens after solving an individual customer's problem.
-
-FDEs are in a position to see recurring workflow problems, missing platform
-capabilities, integration patterns, and model limitations before those patterns
-are obvious from inside the core product team.
-
-The goal is to distinguish one-off customer requirements from insights that can
-improve the product for many customers.
-
-This includes:
-
-* Identifying recurring customer problems
-* Distinguishing bespoke requirements from reusable patterns
-* Turning successful implementations into reusable components
-* Codifying architectures and delivery patterns
-* Sharing field feedback with product and research teams
-* Identifying product gaps from deployment failures
-* Creating internal playbooks and reference architectures
-* Generalizing integrations and evaluation methods
-* Influencing product and model roadmaps
-* Reducing repeated custom work across engagements
-
-### Resources
-
-#### [Forward Deployed Engineering — Palantir Architecture Center](https://www.palantir.com/docs/foundry/architecture-center/overview)
-
-**Type:** Primary source
-**Level:** Beginner–Intermediate
-**Focus:** Field-to-product feedback loops
-
-Explains Palantir's Forward Deployed Engineering methodology, where engineers
-work close to difficult customer problems while collaborating with core
-engineering teams.
-
-Field feedback is continuously synthesized into new product capabilities rather
-than remaining isolated inside individual customer engagements.
-
-Useful for understanding why Forward Deployed Engineering is not simply
-implementation or consulting—it is also a mechanism for product development.
+| Resource                                                                                                                            | Type              | Why it belongs                                               | Covers                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------ | ----------------------------------------------- |
+| [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)                                | Paper             | Original RAG paper.                                          | Retrieval, parametric and non-parametric memory |
+| [An Intuitive Introduction to Text Embeddings](https://stackoverflow.blog/2023/11/09/an-intuitive-introduction-to-text-embeddings/) | Guide             | Clear introduction to embeddings before using vector search. | Embeddings, similarity, semantic search         |
+| [Retrieval Augmented Generation — DeepLearning.AI](https://learn.deeplearning.ai/courses/retrieval-augmented-generation)            | Course            | Practical end-to-end RAG overview.                           | Search, chunking, retrieval, evaluation         |
+| [Chunking Strategies for RAG — Weaviate](https://weaviate.io/blog/chunking-strategies-for-rag)                                      | Engineering guide | Chunking is a frequent source of retrieval failure.          | Fixed, recursive, semantic chunking             |
+| [LlamaIndex RAG Docs](https://developers.llamaindex.ai/python/framework/understanding/rag/)                                         | Documentation     | Practical framework reference.                               | Indexing, nodes, retrieval, query engines       |
+| [Microsoft GraphRAG](https://www.microsoft.com/en-us/research/project/graphrag/)                                                    | Research project  | Useful starting point for graph-enhanced retrieval.          | Entities, communities, graph retrieval          |
 
 ---
 
-#### [Introducing OpenAI Frontier](https://openai.com/index/introducing-openai-frontier/)
+## 13.4 Agents, Tools & Protocols
 
-**Type:** Primary source
-**Level:** Beginner–Intermediate
-**Focus:** Deployment-to-research feedback
-
-Describes how Forward Deployed Engineers work alongside enterprise teams to
-deploy agents in production while maintaining a direct connection to OpenAI
-Research.
-
-Deployment experience provides feedback not only about how applications should
-change, but also about where models themselves need to improve.
-
-Useful for understanding how field deployments can create a feedback loop
-between customer problems, deployed systems, product development, and research.
+| Resource                                                                                                            | Type              | Why it belongs                                                         | Covers                             |
+| ------------------------------------------------------------------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------- | ---------------------------------- |
+| [Building Effective Agents — Anthropic](https://www.anthropic.com/engineering/building-effective-agents)            | Engineering guide | Strong mental model for deciding when agent architecture is justified. | Workflows, agents, orchestration   |
+| [ReAct: Synergizing Reasoning and Acting](https://arxiv.org/abs/2210.03629)                                         | Paper             | Foundational pattern behind many tool-using agents.                    | Reasoning, actions, observations   |
+| [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)                                | Documentation     | Important protocol for connecting AI applications with tools and data. | MCP hosts, clients, servers        |
+| [Agent2Agent Protocol](https://github.com/a2aproject/A2A)                                                           | Specification     | Reference for agent-to-agent interoperability.                         | Discovery, communication, handoffs |
+| [Writing Effective Tools for AI Agents — Anthropic](https://www.anthropic.com/engineering/writing-tools-for-agents) | Engineering guide | Shows how tool interface design affects performance.                   | Tool design, schemas, context      |
+| [LangGraph](https://github.com/langchain-ai/langgraph)                                                              | Framework         | Production-oriented framework for stateful agent workflows.            | State, persistence, HITL           |
+| [OpenAI Agents SDK](https://developers.openai.com/api/docs/guides/agents)                                           | Documentation     | First-party reference for agent orchestration.                         | Agents, tools, handoffs, tracing   |
 
 ---
 
-#### [Forward Deployed Engineer — OpenAI](https://openai.com/careers/forward-deployed-engineer-%28fde%29-sf-san-francisco/)
+## 13.5 Evals, Observability & Monitoring
 
-**Type:** Role overview
-**Level:** Intermediate
-**Focus:** Codifying field patterns
-
-OpenAI's FDE role explicitly includes turning successful deployment patterns
-into tools, playbooks, and reusable building blocks.
-
-It also describes sharing field feedback with Product and Research to help
-identify where models and products succeed and where they need improvement.
-
-Useful for showing that an FDE's responsibility extends beyond completing a
-single deployment to improving how future deployments are built.
+| Resource                                                                                                               | Type              | Why it belongs                                     | Covers                         |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------------- | -------------------------------------------------- | ------------------------------ |
+| [Demystifying Evals for AI Agents — Anthropic](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) | Engineering guide | Strong conceptual foundation for agent evaluation. | Tasks, trials, graders, traces |
+| [LangSmith](https://docs.smith.langchain.com/)                                                                         | Documentation     | Managed tracing and evaluation platform.           | Traces, datasets, evaluators   |
+| [Langfuse](https://langfuse.com/docs/observability/overview)                                                           | Documentation     | Open-source/self-hostable observability platform.  | Tracing, cost, prompts, evals  |
+| [Arize Phoenix](https://docs.arize.com/phoenix/tracing/quickstart)                                                     | Documentation     | Open-source tracing and evaluation tooling.        | OpenInference, traces, evals   |
+| [OpenTelemetry GenAI Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)                        | Specification     | Vendor-neutral observability foundation.           | Spans, metrics, events         |
 
 ---
 
-#### [Forward Deployed Software Engineer — OpenAI](https://openai.com/careers/forward-deployed-software-engineer-sf-san-francisco/)
+## 13.6 Fine-Tuning & Local Models
 
-**Type:** Role overview
-**Level:** Intermediate
-**Focus:** Reusable abstractions
-
-Describes Forward Deployed Software Engineers as building abstractions from
-customer problems that can improve the speed and quality of future FDE
-engagements.
-
-The role also involves contributing customer feedback to Product, Research,
-and Applied Engineering teams and codifying lessons from deployments into
-internal knowledge.
-
-Useful for understanding the transition from solving a specific customer's
-problem to creating reusable engineering capabilities.
+| Resource                                                                                   | Type          | Why it belongs                                       | Covers                                |
+| ------------------------------------------------------------------------------------------ | ------------- | ---------------------------------------------------- | ------------------------------------- |
+| [LoRA](https://arxiv.org/abs/2106.09685)                                                   | Paper         | Foundational parameter-efficient fine-tuning method. | LoRA, adapters, efficient training    |
+| [QLoRA](https://arxiv.org/abs/2305.14314)                                                  | Paper         | Canonical approach for fine-tuning quantized LLMs.   | 4-bit training, memory efficiency     |
+| [Hugging Face PEFT](https://huggingface.co/docs/peft)                                      | Documentation | Practical library for LoRA and related techniques.   | LoRA, QLoRA, adapters                 |
+| [Hugging Face Transformers Training](https://huggingface.co/docs/transformers/en/training) | Documentation | Core training reference.                             | Trainer, checkpoints, evaluation      |
+| [Ollama](https://ollama.com/)                                                              | Tool          | Simple way to run models locally.                    | Local inference, model management     |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp)                                         | Tool          | Important ecosystem for efficient local inference.   | GGUF, quantization, CPU/GPU inference |
+| [vLLM](https://github.com/vllm-project/vllm)                                               | Tool          | Widely used high-throughput model serving engine.    | Serving, batching, inference          |
 
 ---
 
-#### [Who Are Palantir FDEs? — Palantir Developer Community](https://community.palantir.com/t/who-are-palantir-fdes/6847/4)
+## 13.7 AI Security
 
-**Type:** Practitioner perspective
-**Level:** Beginner–Intermediate
-**Focus:** Product learning from the field
-
-A perspective from a long-time Palantir FDE arguing that Forward Deployed
-Engineering is not simply last-mile implementation.
-
-The model involves taking ownership of customer outcomes and continuously
-turning lessons from field deployments into improvements to the core platform.
-
-Useful for understanding the mindset behind the field-to-product loop from a
-practitioner who has worked inside the model for many years.
-
-## 11. FDE Case Studies & Reference Implementations
-
-Case studies help connect the individual skills in this collection into the
-full lifecycle of a real deployment.
-
-The most useful examples show more than which model or framework was used.
-Look for how teams:
-
-* Identified the original customer problem
-* Worked within existing workflows and systems
-* Designed the architecture
-* Integrated enterprise data and tools
-* Evaluated quality and failure modes
-* Handled security and operational constraints
-* Rolled the system out to real users
-* Measured adoption and business impact
-* Improved the system after deployment
-
-### Resources
-
-#### [OpenAI Frontier — Enterprise Agent Deployments](https://openai.com/index/introducing-openai-frontier/)
-
-**Type:** Deployment examples
-**Level:** Intermediate
-**Focus:** End-to-end enterprise AI
-
-OpenAI describes several production deployments where agents are embedded into
-important business workflows.
-
-Examples include reducing manufacturing root-cause analysis from hours to
-minutes, automating parts of sales workflows, and using AI systems to improve
-industrial operations.
-
-Useful for seeing how enterprise AI projects connect technical systems to
-measurable workflow and business outcomes rather than standalone model demos.
+| Resource                                                                                                         | Type               | Why it belongs                                  | Covers                                  |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------- | --------------------------------------- |
+| [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | Security reference | Baseline threat model for LLM applications.     | Injection, disclosure, excessive agency |
+| [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)                       | Framework          | Broad governance and risk-management framework. | Govern, map, measure, manage            |
+| [NIST Adversarial Machine Learning Taxonomy](https://csrc.nist.gov/pubs/ai/100/2/e2025/final)                    | Technical report   | Structured taxonomy of attacks and mitigations. | Evasion, poisoning, extraction          |
+| [MITRE ATLAS](https://atlas.mitre.org/)                                                                          | Knowledge base     | ATT&CK-style knowledge base for AI threats.     | Tactics, techniques, case studies       |
+| [Microsoft PyRIT](https://github.com/Azure/PyRIT)                                                                | Tool               | Framework for automated AI red teaming.         | Adversarial testing, scoring            |
+| [NVIDIA Garak](https://github.com/NVIDIA/garak)                                                                  | Tool               | Vulnerability scanner for LLM applications.     | Injection, leakage, jailbreaks          |
+| [NVIDIA NeMo Guardrails](https://docs.nvidia.com/nemo/guardrails/latest/index.html)                              | Framework          | Programmable controls for AI applications.      | Input/output rails, safety constraints  |
 
 ---
 
-#### [Block — Internal AI Agent Deployment](https://www.anthropic.com/customers/block)
+## 13.8 FDE Toolbox
 
-**Type:** Case study
-**Level:** Intermediate
-**Focus:** Internal tools and enterprise adoption
+A compact list of practical tools that may be useful during FDE work.
 
-Block deployed internal AI capabilities that connect employees with company
-tools, data, and workflows.
-
-The case study is useful because it combines technical implementation with
-organization-wide usage and productivity improvements.
-
-Useful for understanding how internal AI systems need to fit existing workflows
-and create measurable value rather than simply provide a chat interface.
-
----
-
-#### [Harvey — AI for Complex Legal Workflows](https://www.anthropic.com/customers/harvey)
-
-**Type:** Case study
-**Level:** Intermediate
-**Focus:** Human-in-the-loop enterprise AI
-
-Harvey applies AI to complex legal workflows where systems need to work with
-specialized knowledge while maintaining human review and oversight.
-
-The deployment also operates within enterprise security, privacy, and
-compliance requirements.
-
-Useful for understanding how high-stakes domains influence architecture,
-evaluation, human oversight, and production deployment.
+| Area                | Tools                                                                                                                                                           |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Agent orchestration | [LangGraph](https://github.com/langchain-ai/langgraph), [OpenAI Agents SDK](https://developers.openai.com/api/docs/guides/agents)                               |
+| MCP                 | [MCP Specification](https://modelcontextprotocol.io/), [Reference Servers](https://github.com/modelcontextprotocol/servers)                                     |
+| Evals               | [Promptfoo](https://github.com/promptfoo/promptfoo), [DeepEval](https://github.com/confident-ai/deepeval), [Ragas](https://github.com/explodinggradients/ragas) |
+| Observability       | [Langfuse](https://github.com/langfuse/langfuse), [Phoenix](https://github.com/Arize-ai/phoenix), [LangSmith](https://docs.smith.langchain.com/)                |
+| Security            | [PyRIT](https://github.com/Azure/PyRIT), [Garak](https://github.com/NVIDIA/garak), [OWASP GenAI](https://genai.owasp.org/)                                      |
+| Local inference     | [Ollama](https://ollama.com/), [llama.cpp](https://github.com/ggml-org/llama.cpp)                                                                               |
+| Model serving       | [vLLM](https://github.com/vllm-project/vllm)                                                                                                                    |
+| Workflow automation | [n8n](https://docs.n8n.io/advanced-ai/)                                                                                                                         |
 
 ---
 
-#### [Decagon — AI Customer Support Agents](https://www.anthropic.com/customers/decagon)
+# 14. FDE Playbook
 
-**Type:** Case study
-**Level:** Intermediate
-**Focus:** Tool-integrated AI agents
+The resources above explain the concepts.
 
-Decagon builds customer-support agents that integrate with existing business
-systems and workflows rather than operating as isolated chatbots.
-
-Useful for studying how production agents combine model reasoning with tools,
-customer data, business logic, and operational constraints.
+This section provides lightweight frameworks that can be used during an actual engagement.
 
 ---
 
-#### [Sendbird — Enterprise AI Customer Service](https://www.anthropic.com/customers/sendbird)
+## 14.1 Customer Discovery Checklist
 
-**Type:** Case study
-**Level:** Intermediate
-**Focus:** Production reliability and scale
+Before designing a solution, understand:
 
-Sendbird applies AI to customer-support workflows operating across a large
-number of businesses and conversations.
+* Who experiences the problem?
+* What outcome are they trying to achieve?
+* How does the workflow operate today?
+* Where do delays, errors, costs, or repetitive tasks occur?
+* Which systems, tools, data, and teams are involved?
+* What has already been attempted?
+* What technical, security, legal, or organizational constraints exist?
+* How is the problem currently measured?
+* What would a successful outcome look like?
+* Is AI actually necessary?
 
-Useful for understanding the rel
+### Customer Problem Brief
 
-## 12. FDE Careers & Interviews
-
-Forward Deployed Engineering combines skills that are often evaluated
-separately in traditional engineering roles.
-
-Candidates may need to demonstrate not only software engineering depth, but
-also the ability to understand ambiguous customer problems, design systems
-under real constraints, communicate trade-offs, and take ownership from
-prototype through production.
-
-The exact role varies across companies, but useful areas to prepare include:
-
-* Production software engineering
-* System design
-* APIs and enterprise integrations
-* Applied AI and LLM systems
-* Technical problem decomposition
-* Customer discovery
-* Working under ambiguous requirements
-* Communicating technical trade-offs
-* Debugging unfamiliar systems
-* Deployment and operational judgment
-* Measuring customer outcomes
-* End-to-end ownership
-
-### Resources
-
-#### [OpenAI — Forward Deployed Engineering Careers](https://openai.com/careers/search/?q=forward+deployed)
-
-**Type:** Career resource
-**Level:** All levels
-**Focus:** Current FDE roles
-
-OpenAI's Forward Deployed Engineering roles provide useful examples of what
-modern AI companies expect from FDEs.
-
-The roles emphasize end-to-end technical ownership across discovery, scoping,
-system design, implementation, evaluation, production rollout, adoption, and
-customer impact.
-
-Useful for understanding the skills and experience currently expected from
-AI-focused Forward Deployed Engineers.
+> **[User or team] struggles to [complete an important activity] because [evidence-backed cause], resulting in [measurable impact]. A successful outcome would [observable improvement], subject to [important constraints].**
 
 ---
 
-#### [OpenAI — Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/)
+## 14.2 Opportunity Assessment
 
-**Type:** Role description
-**Level:** Intermediate–Advanced
-**Focus:** Skills and responsibilities
-
-A detailed example of a modern FDE role.
-
-The position emphasizes production-grade software engineering alongside
-customer-facing skills such as scoping ambiguous problems, sequencing delivery,
-making trade-offs between scope, speed, and quality, and guiding adoption.
-
-Useful for reverse-engineering the competencies someone should develop when
-preparing for an FDE career.
-
----
-
-#### [How We Build — Vannevar Labs](https://vannevarlabs.com/careers/how-we-build/)
-
-**Type:** Engineering careers resource
-**Level:** Beginner–Intermediate
-**Focus:** Working as an FDE
-
-Shows what Forward Deployed Engineering can look like in environments where
-engineers work directly with operators and deploy technology under real-world
-constraints.
-
-Useful for understanding how different FDE roles can involve much more than
-writing software from a traditional engineering environment.
+| Dimension             | Question                                                                                                 |
+| --------------------- | -------------------------------------------------------------------------------------------------------- |
+| User value            | Does this solve an important user problem?                                                               |
+| Business impact       | Will it save time, reduce cost, increase revenue, or reduce risk?                                        |
+| AI suitability        | Does the task benefit from language, reasoning, generation, classification, or other model capabilities? |
+| Data readiness        | Is relevant and sufficiently reliable data available?                                                    |
+| Technical feasibility | Can it integrate with the customer's environment?                                                        |
+| Risk                  | What happens when the system produces an incorrect result or action?                                     |
+| Adoption              | Will users trust and incorporate it into their workflow?                                                 |
+| Measurability         | Can improvement be demonstrated using agreed metrics?                                                    |
+| Reusability           | Could the solution or its components benefit other customers?                                            |
 
 ---
 
-#### [The Forward Deployed Engineer Guide — FDEInterviews](https://www.fdeinterviews.com/guide)
+## 14.3 Choosing the Right Solution Pattern
 
-**Type:** Career and interview guide
-**Level:** Beginner–Intermediate
-**Focus:** FDE career preparation
+| Pattern                     | Appropriate When                                         |
+| --------------------------- | -------------------------------------------------------- |
+| Prompted model              | One model response can complete the task                 |
+| Structured output           | The result must follow a predictable schema              |
+| RAG                         | The model needs customer or domain knowledge             |
+| Tool-using workflow         | The system must retrieve data or perform defined actions |
+| Deterministic orchestration | The sequence of steps must remain predictable            |
+| Agent                       | The system must dynamically choose actions or tools      |
+| Human-in-the-loop           | Errors or actions could have significant consequences    |
 
-A dedicated guide covering the FDE role, required skills, adjacent roles,
-companies hiring FDEs, the interview process, and Forward Deployed Software
-Engineering.
+> Start with the simplest pattern capable of solving the problem.
 
-Useful as a starting point for someone trying to understand both the career
-path and how hiring for the role works.
-
----
-
-#### [Forward Deployed Engineer Interview Questions — FDEInterviews](https://www.fdeinterviews.com/)
-
-**Type:** Interview practice
-**Level:** Intermediate
-**Focus:** FDE interview preparation
-
-A collection of FDE-specific practice questions covering different areas of
-the interview process.
-
-Useful because FDE interviews can test a broader combination of engineering,
-deployment, product judgment, and customer-facing reasoning than a standard
-software engineering interview.
+More autonomy also introduces more evaluation, security, reliability, and operational complexity.
 
 ---
 
-#### [OpenAI Forward Deployed Engineer Interview Guide — Exponent](https://www.tryexponent.com/guides/openai-forward-deployed-engineer-interview)
+## 14.4 Vertical Slice Checklist
 
-**Type:** Interview guide
-**Level:** Intermediate–Advanced
-**Focus:** AI FDE interviews
+The first implementation should connect the smallest useful end-to-end workflow:
 
-Breaks down the interview process for an AI-focused Forward Deployed Engineer
-role, including coding, system design, project discussions, customer-oriented
-problem solving, and behavioral evaluation.
+* Representative user input
+* Relevant customer data and context
+* Selected model or agent
+* Required tools and integrations
+* Usable output or completed action
+* Human review where necessary
+* Logging and tracing
+* Latency measurement
+* Cost measurement
+* Clear success criteria
 
-Useful for understanding how technical engineering ability and customer
-judgment can be tested together during an FDE hiring process.
+Use real or representative customer examples early.
+
+Synthetic examples often hide the exceptions and operational constraints that matter most.
 
 ---
 
-#### [Forward Deployed Engineer Interview Guide — Plank](https://joinplank.com/forward-deployed-engineer/interview-guide)
+## 14.5 Evaluation Loop
 
-**Type:** Interview guide
-**Level:** Intermediate
-**Focus:** Production and deployment judgment
+For each meaningful failure:
 
-Frames FDE interview preparation around three broad capabilities:
+1. Record the input, context, output, tool calls, and execution trace.
+2. Classify the failure.
+3. Add the example to the evaluation dataset.
+4. Change the prompt, context, model, tools, workflow, or architecture.
+5. Re-run the complete evaluation set.
+6. Check for regressions elsewhere.
 
-**Build** — write production-quality systems.
-**Embed** — work inside customer systems and constraints.
-**Own** — remain accountable for what happens after deployment.
+### Evaluation Methods
 
-Useful for thinking beyond coding interview preparation and preparing examples
-that demonstrate end-to-end ownership, production failures, adoption problems,
-and measurable outcomes.
+| Method                      | Best Used For                                         |
+| --------------------------- | ----------------------------------------------------- |
+| Deterministic checks        | Formats, calculations, required fields, tool outcomes |
+| Reference-answer comparison | Tasks with known correct answers                      |
+| Human evaluation            | Judgment, usefulness, tone, domain-specific quality   |
+| Model-based grading         | Applying a rubric across many outputs                 |
+| Trace review                | Agent decisions, tools, and intermediate steps        |
+| Outcome verification        | Confirming the intended real-world state was achieved |
+
+---
+
+## 14.6 Integration Checklist
+
+Before considering an integration production-ready, ask:
+
+* How does authentication work?
+* What scopes or permissions are required?
+* What happens when credentials expire?
+* Are actions idempotent?
+* How are rate limits handled?
+* Are retries safe?
+* What happens when the external system is unavailable?
+* Are webhook signatures verified?
+* Can duplicate events occur?
+* How are schema changes detected?
+* How are integration failures surfaced?
+* Is there an audit trail for important actions?
+
+---
+
+## 14.7 Production Readiness Checklist
+
+Before broad rollout, check:
+
+* Separate development, testing, and production environments
+* Managed secrets and service identities
+* Least-privilege access
+* Encryption in transit and at rest
+* Input validation
+* Output validation
+* Tool-action validation
+* Rate limits and timeouts
+* Safe retry behavior
+* Fallback behavior
+* Versioned prompts, models, tools, and configuration
+* Quality monitoring
+* Error monitoring
+* Latency monitoring
+* Cost monitoring
+* Audit logs for important actions
+* Rollback procedures
+* Incident-response ownership
+* Human escalation paths
+* Documented operational ownership
+
+### Gradual Rollout
+
+```text
+Internal testing
+→ Customer sandbox
+→ Shadow mode
+→ Human-approved pilot
+→ Limited production
+→ Wider rollout
+```
+
+---
+
+## 14.8 Adoption Checklist
+
+After launch, ask:
+
+* Are the intended users actually using the solution?
+* Which users are not using it?
+* Why?
+* Does the system fit the existing workflow?
+* Are users bypassing it with workarounds?
+* Do users understand when to trust or escalate its output?
+* Is training sufficient?
+* Is support ownership clear?
+* What feedback is recurring?
+* Are adoption metrics improving?
+
+---
+
+## 14.9 Business Impact Checklist
+
+Measure outcomes against a baseline.
+
+Potential metrics include:
+
+* Time saved
+* Cost per task
+* Task completion rate
+* Error rate
+* Quality
+* User satisfaction
+* Adoption
+* Revenue impact
+* Cost reduction
+* Risk reduction
+* Escalation rate
+* Human-review rate
+* Total cost of operation
+
+Avoid treating usage alone as proof of value.
+
+---
+
+## 14.10 Field-to-Product Checklist
+
+After an engagement, ask:
+
+* Which problems were customer-specific?
+* Which problems appeared repeatedly?
+* Which integrations can be reused?
+* Which prompts, tools, evals, or workflows can become templates?
+* Which failures reveal a product gap?
+* Which manual delivery steps could become product capabilities?
+* What should be documented for the next FDE?
+* What should be shared with Product?
+* What should be shared with Research?
+* What should not be generalized?
+
+---
+
+# Contributing
+
+A resource belongs in this collection if it helps someone become better at the actual work of Forward Deployed Engineering.
+
+Good additions include:
+
+* First-party engineering guides
+* Practitioner-written articles
+* Production case studies
+* Runnable reference implementations
+* Technical documentation
+* Open-source tools
+* High-quality courses
+* Frameworks for discovery, deployment, adoption, or measurement
+
+Before adding a resource, ask:
+
+1. **What does this teach?**
+2. **Where does it fit in the FDE journey?**
+3. **Why is it better than what is already listed?**
+4. **Would an FDE realistically use or learn from it?**
+
+Avoid adding a resource simply because it mentions AI, agents, or Forward Deployed Engineering.
+
+Quality is more important than quantity.
+
+---
+
+## Maintainers
+
+Maintained by **The Gen Academy**.
+
+Contributions and suggestions are welcome.
