@@ -283,3 +283,278 @@ security, and production readiness.
 
 *Created by The Gen Academy, the maintainers of this resource collection.*
 
+## 4. Building & Evals
+
+An FDE should build the smallest end-to-end version of a solution that can be
+tested inside a realistic customer workflow.
+
+The goal is not just to create a convincing demo. The system needs to perform
+the intended task reliably, handle important failure cases, and improve the
+customer outcome it was designed for.
+
+This includes:
+
+* Building a small end-to-end vertical slice
+* Testing with realistic customer inputs
+* Creating representative evaluation datasets
+* Defining clear success criteria
+* Testing tool calls and integrations
+* Reviewing agent traces and outcomes
+* Identifying and classifying failures
+* Turning failures into regression tests
+* Measuring latency and cost
+* Re-running evals as the system changes
+
+### Resources
+
+#### [Working with Evals](https://developers.openai.com/api/docs/guides/evals)
+
+**Type:** Documentation
+**Level:** Intermediate
+**Focus:** Building evaluation workflows
+
+A practical guide to creating evaluation datasets, defining evaluation
+criteria, running evals, and comparing different versions of an AI system.
+
+Useful for FDEs who need to turn customer requirements and observed failures
+into repeatable tests before deploying changes.
+
+---
+
+#### [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+
+**Type:** Engineering guide
+**Level:** Intermediate–Advanced
+**Focus:** Agent evaluation
+
+A detailed guide to evaluating agentic systems using tasks, trials, graders,
+execution traces, and real-world outcomes.
+
+Particularly useful for FDEs building systems that call tools or take actions,
+where evaluating only the final model response may miss important failures.
+
+---
+
+#### [Production ML Systems: Deployment Testing](https://developers.google.com/machine-learning/crash-course/production-ml-systems/deployment-testing)
+
+**Type:** Engineering guide
+**Level:** Intermediate
+**Focus:** End-to-end system testing
+
+Explains why production AI and ML systems need testing beyond model quality,
+including input validation, infrastructure compatibility, pipeline integration,
+and end-to-end testing.
+
+Useful for FDEs because failures in customer deployments often happen at the
+boundaries between models, data, infrastructure, and external systems rather
+than inside the model itself.
+
+## 5. Integrations & Enterprise Engineering
+
+FDEs rarely build systems in isolation. A solution usually needs to connect
+with the customer's existing APIs, databases, applications, identity systems,
+and internal infrastructure.
+
+Strong integration design means understanding not only how two systems connect,
+but how the connection behaves when authentication expires, requests fail,
+events arrive twice, schemas change, or one system becomes unavailable.
+
+This includes:
+
+* APIs and service integration
+* Authentication and authorization
+* OAuth and permissions
+* Webhooks and event-driven systems
+* Data synchronization
+* Retries and idempotency
+* Rate limits and timeouts
+* Legacy and enterprise systems
+* Integration failure handling
+* AI tool and MCP integrations
+
+### Resources
+
+#### [Determine Integration Requirements — Microsoft](https://learn.microsoft.com/en-us/power-platform/architecture/key-concepts/integration-patterns/requirements)
+
+**Type:** Architecture guide
+**Level:** Intermediate
+**Focus:** Integration design
+
+Provides a structured way to evaluate an integration based on data volume,
+frequency, direction of data flow, and the capabilities of each connected
+system.
+
+Useful for FDEs because integration design should begin with customer and
+system constraints rather than immediately choosing an API or architecture.
+
+---
+
+#### [Enterprise Integration Patterns — Gregor Hohpe & Bobby Woolf](https://www.enterpriseintegrationpatterns.com/)
+
+**Type:** Reference / Book
+**Level:** Intermediate–Advanced
+**Focus:** Enterprise messaging patterns
+
+A foundational collection of patterns for connecting applications using
+messaging and asynchronous communication.
+
+Useful for understanding recurring integration problems such as message
+routing, transformation, delivery, coordination, and communication between
+systems that were not originally designed to work together.
+
+---
+
+#### [Best Practices for Using Webhooks — GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks)
+
+**Type:** Documentation
+**Level:** Intermediate
+**Focus:** Event-driven integrations
+
+Covers practical webhook concerns including event filtering, secrets,
+verification, fast acknowledgement, redelivery, and protecting against
+duplicate or replayed events.
+
+Useful for FDEs building integrations where customer systems need to react
+reliably to events from external applications.
+
+---
+
+#### [Idempotent Requests — Stripe](https://docs.stripe.com/api/idempotent_requests)
+
+**Type:** Documentation
+**Level:** Intermediate
+**Focus:** Reliable API calls
+
+Explains how idempotency keys allow an application to safely retry an
+operation without accidentally performing the same action multiple times.
+
+This is especially important for FDEs building agents or automated workflows
+that can trigger real-world actions such as creating records, sending
+requests, or modifying customer systems.
+
+---
+
+#### [Authorization Code Flow with PKCE — Auth0](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)
+
+**Type:** Documentation
+**Level:** Intermediate
+**Focus:** Authentication and authorization
+
+Explains the OAuth Authorization Code Flow with Proof Key for Code Exchange
+and how applications securely obtain authorization to access APIs.
+
+Useful for understanding the authentication layer behind many SaaS and
+enterprise API integrations.
+
+---
+
+#### [Model Context Protocol — Architecture](https://modelcontextprotocol.io/specification/architecture)
+
+**Type:** Protocol documentation
+**Level:** Intermediate
+**Focus:** AI tool integrations
+
+Introduces the architecture behind MCP and how AI applications can connect
+to external tools, resources, and systems through a standardized protocol.
+
+Useful for FDEs building AI systems that need structured access to customer
+applications, data sources, and internal tools.
+
+## 6. Production & Deployment
+
+A solution that works in a demo or development environment is not automatically
+ready for a customer's organization.
+
+FDEs need to turn prototypes into systems that are secure, observable,
+reliable, and maintainable inside the customer's real environment.
+
+This includes:
+
+* Development, staging, and production environments
+* Secrets and identity management
+* Access controls and least privilege
+* Data security and privacy
+* Rate limits, retries, and fallbacks
+* Logging, monitoring, and observability
+* Reliability and failure recovery
+* Versioning and rollback
+* Gradual production rollout
+* Incident response
+* Operational ownership
+* AI risk management
+
+### Resources
+
+#### [API Deployment Checklist — OpenAI](https://developers.openai.com/api/docs/guides/deployment-checklist)
+
+**Type:** Deployment guide
+**Level:** Intermediate
+**Focus:** Production AI applications
+
+A practical checklist for taking an AI application into production, covering
+security, API access, reliability, latency, cost, rate limits, and operational
+considerations.
+
+Useful for FDEs moving from a working prototype to a customer-facing production
+system where reliability and operational constraints matter.
+
+---
+
+#### [Design Principles for AI Workloads — Microsoft Azure](https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles)
+
+**Type:** Architecture guide
+**Level:** Intermediate–Advanced
+**Focus:** Production AI architecture
+
+Applies the Azure Well-Architected principles of reliability, security, cost
+optimization, operational excellence, and performance efficiency specifically
+to AI workloads.
+
+Useful for thinking beyond model quality and considering the complete system
+that needs to operate reliably inside an enterprise environment.
+
+---
+
+#### [Monitoring Distributed Systems — Google SRE](https://sre.google/sre-book/monitoring-distributed-systems/)
+
+**Type:** Engineering guide
+**Level:** Intermediate
+**Focus:** Monitoring and observability
+
+Introduces fundamental principles for monitoring production systems, including
+latency, traffic, errors, and saturation.
+
+Useful for FDEs because once a solution is deployed, teams need visibility into
+whether the system is healthy, how users are experiencing it, and where failures
+are occurring.
+
+---
+
+#### [Update a Deployment Without Downtime — Kubernetes](https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/)
+
+**Type:** Documentation / Tutorial
+**Level:** Intermediate
+**Focus:** Rollouts and rollback
+
+Demonstrates how rolling deployments can introduce new application versions
+gradually while maintaining availability, as well as how to roll back when a
+release causes problems.
+
+Useful for understanding an important production principle: deployments should
+be reversible rather than one-way changes to a customer's environment.
+
+---
+
+#### [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+
+**Type:** Framework
+**Level:** Intermediate–Advanced
+**Focus:** AI risk and governance
+
+A framework for identifying, assessing, governing, and managing risks associated
+with AI systems throughout their lifecycle.
+
+Useful for FDEs working with enterprise customers where production deployment
+may involve security, privacy, governance, compliance, safety, and organizational
+risk requirements.
+
