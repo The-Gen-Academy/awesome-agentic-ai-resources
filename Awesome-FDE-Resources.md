@@ -5,425 +5,201 @@
 
 ## Contents
 
-- [What Is a Forward Deployed Engineer?](#what-is-a-forward-deployed-engineer)
-- [The FDE Journey](#the-fde-journey)
-- [Discover the Customer Problem](#discover-the-customer-problem)
-- [Frame the Opportunity](#frame-the-opportunity)
-- [Design the AI Solution](#design-the-ai-solution)
-- [Build and Evaluate](#build-and-evaluate)
-- [Deploy into the Enterprise](#deploy-into-the-enterprise)
-- [Drive Adoption](#drive-adoption)
-- [Measure Business Outcomes](#measure-business-outcomes)
-- [Turn Field Learning into Product](#turn-field-learning-into-product)
-- [Case Studies and Reference Implementations](#case-studies-and-reference-implementations)
-- [FDE Careers and Teamcraft](#fde-careers-and-teamcraft)
-- [Technical Foundations](#technical-foundations)
+1. Understanding the FDE Role
+2. Customer Discovery & Problem Framing
+3. Solution Design
+4. Building & Evals
+5. Integrations & Enterprise Engineering
+6. Production & Deployment
+7. Working With Customers & Stakeholders
+8. Adoption & Change Management
+9. Measuring Business Impact
+10. Turning Field Learning Into Product
+11. FDE Case Studies
+12. FDE Careers & Interviews
+13. Technical Foundations
+14. FDE Playbook
 
-## What Is a Forward Deployed Engineer?
+## 1. Understanding the FDE Role
 
-A Forward Deployed Engineer works closely with customers to understand
-important operational problems and build solutions that create measurable
-business value.
+Forward Deployed Engineers work closely with customers to turn ambiguous,
+high-value problems into production systems.
 
-The role combines:
+The role sits at the intersection of:
 
-- Customer discovery and strategic advisory
+- Customer discovery
 - Software and AI engineering
-- Enterprise integration and deployment
-- Stakeholder communication and product judgment
-- Adoption, measurement, and continuous improvement
+- Enterprise deployment
+- Product judgment
+- Stakeholder communication
+- Adoption and measurable business outcomes
 
-## The FDE Journey
-
-```mermaid
-flowchart LR
-    A["Discover"] --> B["Frame"]
-    B --> C["Design"]
-    C --> D["Build"]
-    D --> E["Deploy"]
-    E --> F["Drive Adoption"]
-    F --> G["Measure"]
-    G --> H["Generalize"]
-```
-
-## Discover the Customer Problem
-
-An FDE should not begin with a model, agent, or technical architecture. The
-first step is to understand how the customer currently works, where the
-problem occurs, and why it matters.
-
-A customer’s initial request may describe a desired feature rather than the
-underlying problem. Through conversations and observation, the FDE turns that
-request into a clear problem statement supported by evidence.
-
-### What the FDE Investigates
-
-- Who experiences the problem?
-- What outcome are they trying to achieve?
-- How does the existing workflow operate?
-- Where do delays, errors, costs, or repetitive tasks occur?
-- Which systems, data, and teams are involved?
-- What has already been attempted?
-- What technical, security, or organizational constraints exist?
-- How does the customer currently measure the problem?
-- What would a successful outcome look like?
-- Is AI actually necessary for solving it?
-
-### Customer Discovery Activities
-
-#### Stakeholder Interviews
-
-Speak with users, decision-makers, technical teams, and process owners. Their
-perspectives may differ, so the FDE should identify both shared goals and
-conflicting expectations.
-
-#### Workflow Observation
-
-Examine how the work is actually completed instead of relying only on how the
-process is described. Record the steps, handoffs, tools, decisions, delays,
-exceptions, and manual workarounds.
-
-#### Root-Cause Analysis
-
-Separate visible symptoms from their underlying causes. A slow process, for
-example, may result from missing data or approval bottlenecks rather than a
-lack of automation.
-
-#### Constraint Discovery
-
-Identify limitations involving data access, privacy, security, compliance,
-integrations, budget, deployment environments, and organizational readiness.
-
-#### Success Definition
-
-Agree on measurable outcomes before building. Useful measures might include
-time saved, reduced error rates, faster resolution, increased completion
-rates, lower costs, or improved user satisfaction.
-
-### Customer Problem Brief
-
-Before designing a solution, the FDE should be able to summarize:
-
-> **[User or team] struggles to [complete an important activity] because
-> [evidence-backed cause], resulting in [measurable impact]. A successful
-> outcome would [observable improvement], subject to [important constraints].**
-
-### Discovery Output
-
-Customer discovery should produce:
-
-- A clearly defined customer problem
-- A map of the current workflow
-- Identified users and stakeholders
-- Evidence of the problem’s impact
-- Known technical and organizational constraints
-- Initial assumptions that still need validation
-- Agreed success measures
-- A decision on whether the opportunity should proceed
+Unlike a traditional software engineering role, the work does not end when
+code ships. FDEs stay close to the customer, learn from real deployments,
+and feed those learnings back into the product.
 
 ### Resources
 
-- [Learning About Users and Their Needs](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs) — Guidance for identifying users, investigating how they currently work, and expressing needs as outcomes rather than proposed features.
+#### [Palantir — Forward Deployed Engineering](https://www.palantir.com/docs/foundry/architecture-center/overview)
 
-- [Writing an Effective Guide for a User Interview](https://www.nngroup.com/articles/interview-guide/) — A practical process for preparing open-ended interview questions, follow-up prompts, and a pilot interview.
+**Type:** Primary source  
+**Level:** Beginner  
+**Focus:** FDE philosophy
 
-- [Creating an Experience Map](https://www.gov.uk/service-manual/user-research/creating-an-experience-map/) — Explains how to map users’ actions, experiences, pain points, teams, and service dependencies over time.
+A useful introduction to the original Forward Deployed Engineering model.
+It explains how engineers work close to real operational problems and use
+what they learn in the field to shape the core product
 
-- [5 Whys Analysis](https://www.atlassian.com/team-playbook/plays/5-whys) — A facilitated exercise for investigating the underlying causes of a problem instead of responding only to its symptoms.
+---
 
-- [Framework for Innovation](https://www.designcouncil.org.uk/resources/framework-for-innovation/) — Introduces the Double Diamond approach for exploring a problem broadly, defining the right challenge, developing possibilities, and testing solutions.
+#### [OpenAI — Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-sf-san-francisco/)
 
-## Frame the Opportunity
+**Type:** Role overview  
+**Level:** Beginner  
+**Focus:** Modern AI FDE
 
-After discovering the customer’s problem, an FDE must decide whether it
-represents a valuable and feasible opportunity—especially whether AI is an
-appropriate part of the solution.
+Shows what FDE work looks like in an AI company today: discovery, technical
+scoping, system design, building, production rollout, adoption, evaluation,
+and feeding deployment learnings back into product and research.
 
-This stage converts discovery findings into a focused use case that the
-customer and delivery team can evaluate.
+---
 
-### What the FDE Defines
+#### [Vannevar Labs — Forward Deployed Engineering](https://vannevarlabs.com/blog/forward-deployed-engineering/)
 
-- The users and workflow being addressed
-- The business impact of the current problem
-- The specific task AI might perform
-- Why AI is preferable to rules, automation, or process improvement
-- The data and system access required
-- Expected quality, latency, cost, and safety requirements
-- Human-review and escalation requirements
-- Technical and organizational risks
-- A small first deployment or pilot
-- Measurable success and stop criteria
+**Type:** Engineering article  
+**Level:** Beginner–Intermediate  
+**Focus:** Embedded engineering
 
-### Opportunity Assessment
+Explains why engineers need to embed with users to understand what should
+actually be built, and how customer understanding can drive new products.
 
-Evaluate each proposed use case across:
+---
 
-| Dimension | Question |
-| --- | --- |
-| User value | Does this solve an important user problem? |
-| Business impact | Will it save time, reduce cost, increase revenue, or reduce risk? |
-| AI suitability | Does the task benefit from language, reasoning, generation, or classification? |
-| Data readiness | Is relevant, lawful, and sufficiently reliable data available? |
-| Technical feasibility | Can it integrate with the customer’s existing environment? |
-| Risk | What happens when the system produces an incorrect result? |
-| Adoption | Will users trust it and incorporate it into their workflow? |
-| Measurability | Can improvement be demonstrated using agreed metrics? |
-| Reusability | Could the solution or its components benefit other customers? |
+#### [The Definitive Guide to Forward Deployed Engineering](https://nextplayso.substack.com/p/the-definitive-guide-to-forward-deployed)
 
-### Opportunity Brief
+**Type:** Practitioner guide  
+**Level:** Beginner–Intermediate  
+**Focus:** FDE operating model
 
-Before designing the system, summarize the opportunity:
+A practitioner perspective from the former leader of Palantir's Project
+Frontline program, covering what FDEs actually do, why the model works,
+and common misconceptions about the role.
 
-> **For [target users], we will improve [existing workflow] by using AI to
-> [specific task]. We expect to improve [business or user measure] from
-> [baseline] to [target]. The initial scope includes [boundaries], requires
-> [data and integrations], and will use [human oversight] to manage
-> [principal risks].**
+## 2. Customer Discovery & Problem Framing
 
-### Resources
+Before designing a solution, an FDE needs to understand how the customer
+currently works, where the real problem occurs, and why solving it matters.
 
-- [Identifying and Scaling AI Use Cases](https://openai.com/business/guides-and-resources/identifying-and-scaling-ai-use-cases/) — A practical guide to finding AI opportunities in business workflows and prioritizing them using expected impact and implementation effort.
+This includes:
 
-- [Project Poster](https://www.atlassian.com/team-playbook/plays/project-poster) — A collaborative method for documenting the problem, assumptions, possible solutions, scope, and intended result before committing to delivery.
-
-- [Define What Success Looks Like](https://www.gov.uk/service-manual/service-standard/point-10-define-success-publish-performance-data) — Guidance for selecting measures that demonstrate whether a service is solving its intended problem.
-  
-## Design the AI Solution
-Once an opportunity is selected, the FDE designs how AI will fit into the
-customer’s workflow.
-
-The goal is not to make every step intelligent or autonomous. Predictable
-steps should remain deterministic, while AI should be used where the task
-requires interpreting unstructured information, handling ambiguity, or making
-context-dependent decisions.
-
-### Decompose the Workflow
-
-Break the proposed workflow into individual tasks and identify:
-
-- The input and expected output of each task
-- Steps that can use deterministic rules or traditional software
-- Steps that require model judgment
-- Information the model needs
-- External systems the solution must access
-- Actions the system may perform
-- Decisions requiring human approval
-- Conditions that should stop or escalate the workflow
-
-### Choose the Appropriate Pattern
-
-| Pattern | Appropriate When |
-| --- | --- |
-| Prompted model | One model response can complete the task |
-| Structured output | The result must follow a predictable schema |
-| Retrieval-augmented generation | The model needs customer or domain knowledge |
-| Tool-using workflow | The system must retrieve data or perform defined actions |
-| Deterministic orchestration | The sequence of steps must remain predictable |
-| Agent | The system must decide which steps or tools to use dynamically |
-| Human-in-the-loop | Errors or actions could have significant consequences |
-
-Start with the simplest pattern capable of meeting the customer’s requirements.
-Additional autonomy also introduces additional evaluation, security, and
-operational complexity.
-
-### Design Decisions
-
-The FDE should define:
-
-- Model inputs and expected outputs
-- Required customer context and grounding data
-- Model and provider constraints
-- Available tools and their permissions
-- Workflow state and completion conditions
-- Data retention and privacy requirements
-- Human-review and escalation points
-- Acceptable latency and operating cost
-- Expected failure modes and fallback behaviour
-- Initial evaluation criteria
-
-### Solution Design Brief
-
-Before implementation, document:
-
-> **The solution uses [AI capability] to perform [specific tasks] within
-> [customer workflow]. It receives [inputs and context], may use [tools and
-> systems], and produces [expected output or action]. Deterministic software
-> controls [predictable steps], while human approval is required for
-> [high-risk decisions]. The solution succeeds when [evaluation criteria] are
-> met within [latency, cost, and safety constraints].**
+* Understanding users and stakeholders
+* Mapping existing workflows
+* Identifying pain points and bottlenecks
+* Separating symptoms from root causes
+* Understanding technical and organizational constraints
+* Defining measurable outcomes
+* Deciding whether AI is actually appropriate
 
 ### Resources
 
-- [A Practical Guide to Building AI Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) — Explains when an agent is appropriate, how models, tools, and instructions fit together, and where guardrails and human intervention are required.
+#### [Learning About Users and Their Needs](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs)
 
-- [Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents) — Distinguishes fixed workflows from autonomous agents and recommends beginning with simple, composable patterns.
+**Type:** Guide
+**Level:** Beginner
+**Focus:** User research
 
-- [Application Design for AI Workloads](https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design) — Architecture guidance covering AI application layers, deterministic orchestration, agents, knowledge sources, tools, and nonfunctional requirements.
+A practical introduction to understanding what users are trying to accomplish
+before deciding what should be built. Useful for avoiding the common mistake
+of treating a customer's requested feature as the underlying problem.
 
-### Cohort-Based Learning
+---
 
-- [Mastering Agentic AI](https://maven.com/aishwarya-srinivasan/mastering-ai-agents) — A cohort-based program covering
-  LLM application foundations, RAG and context engineering, agent architectures, MCP and A2A, orchestration frameworks, fine-tuning, local models, AI evaluations, observability, security, and production readiness.
-  Availability and enrollment dates may vary.
-  *Created by [THE GEN ACADEMY], the maintainers of this collection.*
-  
-## Build and Evaluate
+#### [Writing an Effective Guide for a User Interview](https://www.nngroup.com/articles/interview-guide/)
 
-An FDE should build the smallest end-to-end version of the solution that can
-be tested inside a realistic customer workflow.
+**Type:** Guide
+**Level:** Beginner
+**Focus:** Stakeholder interviews
 
-The objective is not merely to produce a convincing demonstration. The FDE
-must determine whether the system performs the intended task consistently,
-handles important failures, and improves the customer outcome defined earlier.
+Explains how to prepare open-ended interview questions, organize an interview
+guide, use follow-up questions, and avoid leading participants toward a
+particular answer.
 
-### Build a Vertical Slice
+---
 
-The first implementation should connect the essential parts of the solution:
+#### [Creating an Experience Map](https://www.gov.uk/service-manual/user-research/creating-an-experience-map/)
 
-- A representative user input
-- Relevant customer data and context
-- The selected model or agent
-- Required tools and integrations
-- A usable output or completed action
-- Human review where necessary
-- Logging of model responses, tool calls, errors, latency, and cost
+**Type:** Guide
+**Level:** Beginner–Intermediate
+**Focus:** Workflow mapping
 
-Use real or representative examples early. Artificial examples may hide the
-language, exceptions, incomplete data, and operational constraints present in
-the customer’s environment.
+Shows how to map a user's journey across actions, pain points, teams, systems,
+and dependencies. Useful for FDEs trying to understand how work actually moves
+through an organization before introducing automation or AI.
 
-### Define the Evaluation Set
+---
 
-Create a collection of test cases that includes:
+#### [5 Whys Analysis](https://www.atlassian.com/team-playbook/plays/5-whys)
 
-- Common customer tasks
-- Important edge cases
-- Previously observed failures
-- Ambiguous or incomplete inputs
-- Unsafe or adversarial inputs
-- Tool and integration failures
-- Cases that require human escalation
-- Cases where the system should refuse or take no action
+**Type:** Framework
+**Level:** Beginner
+**Focus:** Root-cause analysis
 
-Each test case should have clear success criteria based on the customer’s
-workflow and expected outcome.
+A simple technique for repeatedly asking why a problem occurs in order to move
+past visible symptoms and identify the underlying cause.
 
-### Choose Evaluation Methods
+---
 
-| Method | Best Used For |
-| --- | --- |
-| Deterministic checks | Formats, required fields, calculations, and tool outcomes |
-| Reference-answer comparison | Tasks with known correct answers |
-| Human evaluation | Usefulness, judgment, tone, and domain-specific quality |
-| Model-based grading | Applying a defined rubric across many outputs |
-| Trace review | Examining an agent’s decisions, tool calls, and intermediate steps |
-| Outcome verification | Confirming that the intended real-world state was achieved |
+#### [Framework for Innovation — Double Diamond](https://www.designcouncil.org.uk/resources/framework-for-innovation/)
 
-Do not rely on one score alone. Combine automated evaluation with domain-expert
-review and realistic workflow testing.
+**Type:** Framework
+**Level:** Beginner–Intermediate
+**Focus:** Problem framing
 
-### Iterate Through Failures
+Introduces the Double Diamond approach: explore the problem broadly, define the
+right challenge, develop possible solutions, and test them.
 
-For each meaningful failure:
+Useful for FDEs working with ambiguous customer requests where the original
+problem statement may change as more context is discovered.
 
-1. Record the input, context, output, and execution trace.
-2. Classify the cause of the failure.
-3. Add the example to the evaluation set.
-4. Change the prompt, context, tools, model, or workflow.
-5. Run the complete evaluation set again.
-6. Check that the change did not introduce regressions elsewhere.
+---
 
-### Build and Evaluation Output
+#### [Identifying and Scaling AI Use Cases](https://openai.com/business/guides-and-resources/identifying-and-scaling-ai-use-cases/)
 
-Before moving toward deployment, the FDE should have:
+**Type:** Guide
+**Level:** Beginner–Intermediate
+**Focus:** AI opportunity identification
 
-- A working end-to-end solution
-- A representative evaluation dataset
-- Defined quality and safety criteria
-- Baseline evaluation results
-- Documented failure categories
-- Tested human-review and escalation paths
-- Recorded latency and cost measurements
-- Evidence that the solution is ready for a limited customer pilot
+A practical guide for identifying areas where AI can create meaningful
+business value and prioritizing use cases based on their potential impact.
 
-### Resources
+Useful after customer discovery when deciding whether the problem actually
+benefits from AI and which opportunity is worth pursuing first.
 
-- [Working with Evals](https://developers.openai.com/api/docs/guides/evals) — Practical documentation for creating test datasets, defining evaluation criteria, running evaluations, and comparing system changes.
+---
 
-- [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — A detailed guide to tasks, trials, graders, traces, outcomes, capability evaluations, and regression testing for agentic systems.
+#### [Project Poster](https://www.atlassian.com/team-playbook/plays/project-poster)
 
-- [Production ML Systems: Deployment Testing](https://developers.google.com/machine-learning/crash-course/production-ml-systems/deployment-testing) — Explains why production AI systems require testing beyond model quality, including pipelines, serving infrastructure, and integration behaviour.
+**Type:** Framework
+**Level:** Beginner
+**Focus:** Opportunity framing
 
-## Deploy into the Enterprise
+A collaborative framework for documenting the problem, assumptions, possible
+solutions, scope, and intended outcome before committing significant
+engineering effort.
 
-A solution that works in a development environment is not automatically ready
-for a customer’s organization.
+Useful for turning discovery findings into a shared problem statement that
+customer and engineering teams can align around.
 
-Enterprise deployment requires the FDE to adapt the solution to the customer’s
-infrastructure, identity systems, data policies, security requirements, and
-operating model.
+---
 
-### Understand the Customer Environment
+#### [Define What Success Looks Like](https://www.gov.uk/service-manual/service-standard/point-10-define-success-publish-performance-data)
 
-Before deployment, determine:
+**Type:** Guide
+**Level:** Beginner
+**Focus:** Success metrics
 
-- Where the application and models will run
-- Whether the customer requires cloud, private-cloud, or self-hosted deployment
-- Which databases, applications, APIs, and legacy systems must be connected
-- How users and services will authenticate
-- Which permissions each user, tool, and agent should receive
-- What customer data may enter the model
-- Where prompts, responses, traces, and files will be stored
-- Which security, legal, compliance, and procurement reviews are required
-- Who will operate and support the solution after launch
+Guidance for defining measurable outcomes before delivery begins.
 
-### Prepare for Production
-
-The deployment should include:
-
-- Separate development, testing, and production environments
-- Managed secrets and service identities
-- Least-privilege access controls
-- Encryption in transit and at rest
-- Input, output, and tool-action validation
-- Rate limits, timeouts, retries, and fallback behaviour
-- Versioned prompts, models, tools, and configuration
-- Monitoring for quality, latency, cost, errors, and security events
-- Audit logs for important actions
-- Rollback and incident-response procedures
-- Documented operational ownership
-
-### Roll Out Gradually
-
-Avoid immediately exposing an unproven AI system to every user or workflow.
-
-A controlled rollout may progress through:
-
-```text
-Internal testing
-→ Customer sandbox
-→ Shadow mode
-→ Human-approved pilot
-→ Limited production
-→ Wider rollout
-```
-### Resources
-
-- [API Deployment Checklist](https://developers.openai.com/api/docs/guides/deployment-checklist) — OpenAI’s checklist for preparing model-powered applications for production, including security, access control, monitoring, reliability, latency, and cost.
-
-- [AI Workload Documentation](https://learn.microsoft.com/en-us/azure/well-architected/ai/) — Microsoft’s architecture guidance for designing and operating reliable, secure, cost-effective, and observable AI workloads.
-
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — A framework for identifying, assessing, governing, and managing AI risks throughout the system lifecycle.
-  
-## Drive Adoption
-
-## Measure Business Outcomes
-
-## Turn Field Learning into Product
-
-## Case Studies and Reference Implementations
-
-## FDE Careers and Teamcraft
-
-## Technical Foundations
+Useful for ensuring an FDE engagement is evaluated based on changes to the
+customer's workflow or business outcome rather than whether a technically
+impressive system was built.
