@@ -1031,7 +1031,7 @@ Look for how teams:
 
 ### Resources
 
-#### OpenAI Frontier — Enterprise Agent Deployments
+#### [OpenAI Frontier — Enterprise Agent Deployments](https://openai.com/index/introducing-openai-frontier/)
 
 **Type:** Deployment examples
 **Level:** Intermediate
@@ -1041,94 +1041,70 @@ OpenAI describes several production deployments where agents are embedded into
 important business workflows.
 
 Examples include reducing manufacturing root-cause analysis from hours to
-minutes, automating parts of a sales workflow, and using AI systems to improve
-industrial production.
+minutes, automating parts of sales workflows, and using AI systems to improve
+industrial operations.
 
-Useful for seeing how enterprise AI projects should ultimately be connected to
+Useful for seeing how enterprise AI projects connect technical systems to
 measurable workflow and business outcomes rather than standalone model demos.
 
 ---
 
-#### Block — Internal AI Agent Deployment
+#### [Block — Internal AI Agent Deployment](https://www.anthropic.com/customers/block)
 
 **Type:** Case study
 **Level:** Intermediate
 **Focus:** Internal tools and enterprise adoption
 
-Block deployed an internal AI agent that connects employees with company tools
-and data, supports tasks such as querying information and generating SQL, and
-helps automate internal workflows.
+Block deployed internal AI capabilities that connect employees with company
+tools, data, and workflows.
 
-The case study is useful because it combines technical capability with
-organization-wide adoption and measurable productivity gains.
+The case study is useful because it combines technical implementation with
+organization-wide usage and productivity improvements.
+
+Useful for understanding how internal AI systems need to fit existing workflows
+and create measurable value rather than simply provide a chat interface.
 
 ---
 
-#### Harvey — AI for Complex Legal Workflows
+#### [Harvey — AI for Complex Legal Workflows](https://www.anthropic.com/customers/harvey)
 
 **Type:** Case study
 **Level:** Intermediate
 **Focus:** Human-in-the-loop enterprise AI
 
-Harvey uses AI to turn complex legal tasks into structured workflows where the
-system can ask follow-up questions, generate intermediate work, and allow human
-review before producing the final result.
+Harvey applies AI to complex legal workflows where systems need to work with
+specialized knowledge while maintaining human review and oversight.
 
-The deployment also had to satisfy enterprise security, privacy, compliance,
-and regional data-processing requirements.
+The deployment also operates within enterprise security, privacy, and
+compliance requirements.
 
-Useful for understanding how human review and enterprise constraints shape the
-architecture of high-stakes AI systems.
+Useful for understanding how high-stakes domains influence architecture,
+evaluation, human oversight, and production deployment.
 
 ---
 
-#### Decagon — AI Customer Support Agents
+#### [Decagon — AI Customer Support Agents](https://www.anthropic.com/customers/decagon)
 
 **Type:** Case study
 **Level:** Intermediate
 **Focus:** Tool-integrated AI agents
 
-Decagon builds customer-support agents that integrate with existing ticketing
-systems, customer databases, and business processes rather than operating as
-isolated chatbots.
+Decagon builds customer-support agents that integrate with existing business
+systems and workflows rather than operating as isolated chatbots.
 
-Useful for studying how agents can combine model reasoning with enterprise
-systems and structured workflows while still needing reliability and policy
-compliance.
+Useful for studying how production agents combine model reasoning with tools,
+customer data, business logic, and operational constraints.
 
 ---
 
-#### Sendbird — Enterprise AI Customer Service
+#### [Sendbird — Enterprise AI Customer Service](https://www.anthropic.com/customers/sendbird)
 
 **Type:** Case study
 **Level:** Intermediate
-**Focus:** Production reliability and scaling
+**Focus:** Production reliability and scale
 
-Sendbird uses AI to power customer-support agents across a platform serving
-thousands of businesses.
+Sendbird applies AI to customer-support workflows operating across a large
+number of businesses and conversations.
 
-The case study covers the need to maintain accuracy, reliability, and
-enterprise requirements while automating high-volume conversations.
+Useful for understanding the rel
 
-Useful for understanding how an AI application changes when it has to operate
-reliably across many customers rather than succeed in a controlled prototype.
-
----
-
-#### Vannevar Labs — Forward Deployed Engineering
-
-**Type:** Practitioner case study
-**Level:** Intermediate
-**Focus:** Building an FDE function
-
-Vannevar Labs explains why its engineering organization introduced Forward
-Deployed Engineers as it expanded across more customers, missions, and product
-areas.
-
-The article describes engineers embedding with users, learning their missions,
-building alongside them, and turning that understanding into new product
-capabilities.
-
-Useful because it shows Forward Deployed Engineering being adopted as an
-organizational model in response to real scaling and product-development
-problems.
