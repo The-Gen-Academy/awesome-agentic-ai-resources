@@ -1108,3 +1108,140 @@ number of businesses and conversations.
 
 Useful for understanding the rel
 
+## 12. FDE Careers & Interviews
+
+Forward Deployed Engineering combines skills that are often evaluated
+separately in traditional engineering roles.
+
+Candidates may need to demonstrate not only software engineering depth, but
+also the ability to understand ambiguous customer problems, design systems
+under real constraints, communicate trade-offs, and take ownership from
+prototype through production.
+
+The exact role varies across companies, but useful areas to prepare include:
+
+* Production software engineering
+* System design
+* APIs and enterprise integrations
+* Applied AI and LLM systems
+* Technical problem decomposition
+* Customer discovery
+* Working under ambiguous requirements
+* Communicating technical trade-offs
+* Debugging unfamiliar systems
+* Deployment and operational judgment
+* Measuring customer outcomes
+* End-to-end ownership
+
+### Resources
+
+#### [OpenAI — Forward Deployed Engineering Careers](https://openai.com/careers/search/?q=forward+deployed)
+
+**Type:** Career resource
+**Level:** All levels
+**Focus:** Current FDE roles
+
+OpenAI's Forward Deployed Engineering roles provide useful examples of what
+modern AI companies expect from FDEs.
+
+The roles emphasize end-to-end technical ownership across discovery, scoping,
+system design, implementation, evaluation, production rollout, adoption, and
+customer impact.
+
+Useful for understanding the skills and experience currently expected from
+AI-focused Forward Deployed Engineers.
+
+---
+
+#### [OpenAI — Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/)
+
+**Type:** Role description
+**Level:** Intermediate–Advanced
+**Focus:** Skills and responsibilities
+
+A detailed example of a modern FDE role.
+
+The position emphasizes production-grade software engineering alongside
+customer-facing skills such as scoping ambiguous problems, sequencing delivery,
+making trade-offs between scope, speed, and quality, and guiding adoption.
+
+Useful for reverse-engineering the competencies someone should develop when
+preparing for an FDE career.
+
+---
+
+#### [How We Build — Vannevar Labs](https://vannevarlabs.com/careers/how-we-build/)
+
+**Type:** Engineering careers resource
+**Level:** Beginner–Intermediate
+**Focus:** Working as an FDE
+
+Shows what Forward Deployed Engineering can look like in environments where
+engineers work directly with operators and deploy technology under real-world
+constraints.
+
+Useful for understanding how different FDE roles can involve much more than
+writing software from a traditional engineering environment.
+
+---
+
+#### [The Forward Deployed Engineer Guide — FDEInterviews](https://www.fdeinterviews.com/guide)
+
+**Type:** Career and interview guide
+**Level:** Beginner–Intermediate
+**Focus:** FDE career preparation
+
+A dedicated guide covering the FDE role, required skills, adjacent roles,
+companies hiring FDEs, the interview process, and Forward Deployed Software
+Engineering.
+
+Useful as a starting point for someone trying to understand both the career
+path and how hiring for the role works.
+
+---
+
+#### [Forward Deployed Engineer Interview Questions — FDEInterviews](https://www.fdeinterviews.com/)
+
+**Type:** Interview practice
+**Level:** Intermediate
+**Focus:** FDE interview preparation
+
+A collection of FDE-specific practice questions covering different areas of
+the interview process.
+
+Useful because FDE interviews can test a broader combination of engineering,
+deployment, product judgment, and customer-facing reasoning than a standard
+software engineering interview.
+
+---
+
+#### [OpenAI Forward Deployed Engineer Interview Guide — Exponent](https://www.tryexponent.com/guides/openai-forward-deployed-engineer-interview)
+
+**Type:** Interview guide
+**Level:** Intermediate–Advanced
+**Focus:** AI FDE interviews
+
+Breaks down the interview process for an AI-focused Forward Deployed Engineer
+role, including coding, system design, project discussions, customer-oriented
+problem solving, and behavioral evaluation.
+
+Useful for understanding how technical engineering ability and customer
+judgment can be tested together during an FDE hiring process.
+
+---
+
+#### [Forward Deployed Engineer Interview Guide — Plank](https://joinplank.com/forward-deployed-engineer/interview-guide)
+
+**Type:** Interview guide
+**Level:** Intermediate
+**Focus:** Production and deployment judgment
+
+Frames FDE interview preparation around three broad capabilities:
+
+**Build** — write production-quality systems.
+**Embed** — work inside customer systems and constraints.
+**Own** — remain accountable for what happens after deployment.
+
+Useful for thinking beyond coding interview preparation and preparing examples
+that demonstrate end-to-end ownership, production failures, adoption problems,
+and measurable outcomes.
