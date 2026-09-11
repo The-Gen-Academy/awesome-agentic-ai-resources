@@ -658,3 +658,477 @@ repeatedly rather than waiting until individual components are polished.
 Useful for FDEs because showing an end-to-end workflow often exposes missing
 requirements, integration problems, and incorrect assumptions much earlier
 than reviewing individual features in isolation.
+
+## 8. Adoption & Change Management
+
+A technically successful deployment does not create value if people do not
+actually use it.
+
+FDEs need to understand why users adopt or reject a new system, help teams
+transition from existing workflows, and make sure the solution becomes part
+of normal day-to-day work.
+
+This includes:
+
+* Understanding barriers to adoption
+* Communicating why the change matters
+* Training users and support teams
+* Building confidence and trust
+* Supporting users during rollout
+* Collecting feedback from real usage
+* Measuring adoption
+* Identifying workflow friction
+* Reinforcing new ways of working
+* Sustaining adoption after launch
+
+### Resources
+
+#### [Define a Strategy for Adoption and Change Management — Microsoft](https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/implementation-strategy-define-strategy-adoption-change-management)
+
+**Type:** Implementation guide
+**Level:** Intermediate
+**Focus:** Adoption strategy
+
+Explains why technically successful projects can still fail to deliver business
+value when users do not adopt the new system.
+
+Covers executive sponsorship, employee engagement, communication, project-team
+involvement, and the relationship between user experience and successful
+technology adoption.
+
+Useful for FDEs because deployment success should be measured by whether the
+solution becomes useful inside the customer's real workflow, not simply whether
+it goes live.
+
+---
+
+#### [The Prosci ADKAR Model](https://www.prosci.com/methodology/adkar)
+
+**Type:** Change management framework
+**Level:** Beginner–Intermediate
+**Focus:** Individual adoption
+
+Introduces the ADKAR model:
+
+* Awareness
+* Desire
+* Knowledge
+* Ability
+* Reinforcement
+
+The framework helps explain why users may resist or fail to adopt a new system
+even when the technology itself works.
+
+Useful for FDEs diagnosing whether an adoption problem comes from lack of
+understanding, motivation, training, capability, or reinforcement.
+
+---
+
+#### [Encouraging People to Use Your Digital Service — GOV.UK](https://www.gov.uk/service-manual/helping-people-to-use-your-service/encouraging-people-to-use-your-digital-service)
+
+**Type:** Service design guide
+**Level:** Beginner
+**Focus:** Adoption barriers
+
+Recommends researching people who are not using a new service rather than
+assuming why adoption is low.
+
+Covers common barriers such as lack of awareness, difficulty using the system,
+lack of confidence, concerns about security, and preference for existing
+workflows.
+
+Useful for FDEs because poor adoption can reveal problems in the product,
+workflow, training, or trust rather than simple resistance to change.
+
+---
+
+#### [Measuring Digital Take-Up — GOV.UK](https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up)
+
+**Type:** Measurement guide
+**Level:** Beginner–Intermediate
+**Focus:** Adoption metrics
+
+Explains how to establish a baseline and measure how many users move toward a
+new digital workflow over time.
+
+Useful for FDEs because adoption should be measured rather than inferred from
+successful deployment or positive stakeholder feedback.
+
+---
+
+#### [Change Management Communication — Atlassian](https://www.atlassian.com/team-playbook/plays/change-management-communication-with-video)
+
+**Type:** Practical framework
+**Level:** Beginner
+**Focus:** Communicating change
+
+Provides a simple structure for explaining what is changing, why the change
+matters, how users will be affected, what success looks like, and where users
+can provide feedback.
+
+Useful during an FDE rollout because users are more likely to adopt a new
+workflow when they understand both the reason for the change and how it affects
+their daily work.
+
+---
+
+#### [Manage Changes During Transition and Handover — Microsoft](https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/change-management-transition-handover)
+
+**Type:** Implementation guide
+**Level:** Intermediate
+**Focus:** Sustaining adoption
+
+Covers the transition from implementation to ongoing operation, including
+knowledge transfer, training support teams, measuring usage, addressing
+technology and process barriers, and sustaining the change after go-live.
+
+Useful for FDEs preparing to move from hands-on deployment work toward long-term
+customer ownership of the system.
+
+## 9. Measuring Business Impact
+
+An FDE engagement is successful only if the deployed system improves a real
+customer outcome.
+
+Technical quality and adoption matter, but they are not the final measure of
+success. FDEs need to connect the system's performance to changes in the
+customer's workflow, operating costs, revenue, risk, or user experience.
+
+This includes:
+
+* Defining success before deployment
+* Establishing a baseline
+* Measuring workflow outcomes
+* Tracking time saved and productivity gains
+* Measuring cost reduction or revenue impact
+* Evaluating completion and error rates
+* Measuring quality alongside speed
+* Comparing outcomes before and after deployment
+* Tracking total cost of operation
+* Connecting technical metrics to business KPIs
+
+### Resources
+
+#### [How to Set Performance Metrics for Your Service — GOV.UK](https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service)
+
+**Type:** Measurement guide
+**Level:** Beginner–Intermediate
+**Focus:** Metrics and baselines
+
+Explains how to start from the purpose of a service, define intended benefits,
+turn those benefits into measurable hypotheses, and establish meaningful
+performance metrics.
+
+It also emphasizes establishing a baseline so improvements can be compared
+against the previous workflow rather than judged in isolation.
+
+Useful for FDEs because success metrics should be defined before a solution is
+built, not added after deployment.
+
+---
+
+#### [Using Performance Data to Improve Your Service — GOV.UK](https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction)
+
+**Type:** Measurement guide
+**Level:** Beginner
+**Focus:** Operational outcomes
+
+Introduces practical metrics such as cost per transaction, user satisfaction,
+completion rate, and adoption.
+
+Useful for FDEs because it connects usage data to whether a service is actually
+helping users complete work more successfully and efficiently.
+
+---
+
+#### [A Scorecard for the AI Age — OpenAI](https://openai.com/index/a-scorecard-for-the-ai-age/)
+
+**Type:** Business framework
+**Level:** Intermediate
+**Focus:** AI economics and productivity
+
+Proposes evaluating AI based on the amount of useful work completed rather than
+relying only on traditional software metrics such as seats or active users.
+
+It focuses on questions such as:
+
+* How much useful work gets completed?
+* What does a successful task cost?
+* How often is the work correct?
+* Does the economics improve as usage grows?
+
+Useful for FDEs connecting model or agent performance to the economic value
+created for the customer.
+
+---
+
+#### [From Promise to Impact: How Companies Can Measure the Full Value of AI — McKinsey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/from-promise-to-impact-how-companies-can-measure-and-realize-the-full-value-of-ai)
+
+**Type:** Business framework
+**Level:** Intermediate–Advanced
+**Focus:** Enterprise AI value
+
+Introduces a layered approach for measuring AI initiatives from technical
+performance and user engagement through strategic outcomes and financial
+impact.
+
+Examples include revenue growth, cost-to-serve reduction, margin improvement,
+and total cost of ownership.
+
+Useful for FDEs working with enterprise stakeholders who need evidence that an
+AI deployment is producing measurable business value rather than simply
+achieving technical milestones.
+
+---
+
+#### [How Evals Drive the Next Chapter in AI for Businesses — OpenAI](https://openai.com/index/evals-drive-next-chapter-of-ai/)
+
+**Type:** Business and evaluation guide
+**Level:** Intermediate
+**Focus:** Connecting evals to business objectives
+
+Explains a simple cycle:
+
+**Specify → Measure → Improve**
+
+The idea is to define what a good business outcome looks like, test the system
+under realistic conditions, and improve it based on observed failures.
+
+Useful for FDEs because evaluation criteria should ultimately reflect what the
+customer considers successful rather than only model-level benchmarks.
+
+## 10. Turning Field Learning Into Product
+
+One of the most distinctive parts of Forward Deployed Engineering is what
+happens after solving an individual customer's problem.
+
+FDEs are in a position to see recurring workflow problems, missing platform
+capabilities, integration patterns, and model limitations before those patterns
+are obvious from inside the core product team.
+
+The goal is to distinguish one-off customer requirements from insights that can
+improve the product for many customers.
+
+This includes:
+
+* Identifying recurring customer problems
+* Distinguishing bespoke requirements from reusable patterns
+* Turning successful implementations into reusable components
+* Codifying architectures and delivery patterns
+* Sharing field feedback with product and research teams
+* Identifying product gaps from deployment failures
+* Creating internal playbooks and reference architectures
+* Generalizing integrations and evaluation methods
+* Influencing product and model roadmaps
+* Reducing repeated custom work across engagements
+
+### Resources
+
+#### [Forward Deployed Engineering — Palantir Architecture Center](https://www.palantir.com/docs/foundry/architecture-center/overview)
+
+**Type:** Primary source
+**Level:** Beginner–Intermediate
+**Focus:** Field-to-product feedback loops
+
+Explains Palantir's Forward Deployed Engineering methodology, where engineers
+work close to difficult customer problems while collaborating with core
+engineering teams.
+
+Field feedback is continuously synthesized into new product capabilities rather
+than remaining isolated inside individual customer engagements.
+
+Useful for understanding why Forward Deployed Engineering is not simply
+implementation or consulting—it is also a mechanism for product development.
+
+---
+
+#### [Introducing OpenAI Frontier](https://openai.com/index/introducing-openai-frontier/)
+
+**Type:** Primary source
+**Level:** Beginner–Intermediate
+**Focus:** Deployment-to-research feedback
+
+Describes how Forward Deployed Engineers work alongside enterprise teams to
+deploy agents in production while maintaining a direct connection to OpenAI
+Research.
+
+Deployment experience provides feedback not only about how applications should
+change, but also about where models themselves need to improve.
+
+Useful for understanding how field deployments can create a feedback loop
+between customer problems, deployed systems, product development, and research.
+
+---
+
+#### [Forward Deployed Engineer — OpenAI](https://openai.com/careers/forward-deployed-engineer-%28fde%29-sf-san-francisco/)
+
+**Type:** Role overview
+**Level:** Intermediate
+**Focus:** Codifying field patterns
+
+OpenAI's FDE role explicitly includes turning successful deployment patterns
+into tools, playbooks, and reusable building blocks.
+
+It also describes sharing field feedback with Product and Research to help
+identify where models and products succeed and where they need improvement.
+
+Useful for showing that an FDE's responsibility extends beyond completing a
+single deployment to improving how future deployments are built.
+
+---
+
+#### [Forward Deployed Software Engineer — OpenAI](https://openai.com/careers/forward-deployed-software-engineer-sf-san-francisco/)
+
+**Type:** Role overview
+**Level:** Intermediate
+**Focus:** Reusable abstractions
+
+Describes Forward Deployed Software Engineers as building abstractions from
+customer problems that can improve the speed and quality of future FDE
+engagements.
+
+The role also involves contributing customer feedback to Product, Research,
+and Applied Engineering teams and codifying lessons from deployments into
+internal knowledge.
+
+Useful for understanding the transition from solving a specific customer's
+problem to creating reusable engineering capabilities.
+
+---
+
+#### [Who Are Palantir FDEs? — Palantir Developer Community](https://community.palantir.com/t/who-are-palantir-fdes/6847/4)
+
+**Type:** Practitioner perspective
+**Level:** Beginner–Intermediate
+**Focus:** Product learning from the field
+
+A perspective from a long-time Palantir FDE arguing that Forward Deployed
+Engineering is not simply last-mile implementation.
+
+The model involves taking ownership of customer outcomes and continuously
+turning lessons from field deployments into improvements to the core platform.
+
+Useful for understanding the mindset behind the field-to-product loop from a
+practitioner who has worked inside the model for many years.
+
+## 11. FDE Case Studies & Reference Implementations
+
+Case studies help connect the individual skills in this collection into the
+full lifecycle of a real deployment.
+
+The most useful examples show more than which model or framework was used.
+Look for how teams:
+
+* Identified the original customer problem
+* Worked within existing workflows and systems
+* Designed the architecture
+* Integrated enterprise data and tools
+* Evaluated quality and failure modes
+* Handled security and operational constraints
+* Rolled the system out to real users
+* Measured adoption and business impact
+* Improved the system after deployment
+
+### Resources
+
+#### OpenAI Frontier — Enterprise Agent Deployments
+
+**Type:** Deployment examples
+**Level:** Intermediate
+**Focus:** End-to-end enterprise AI
+
+OpenAI describes several production deployments where agents are embedded into
+important business workflows.
+
+Examples include reducing manufacturing root-cause analysis from hours to
+minutes, automating parts of a sales workflow, and using AI systems to improve
+industrial production.
+
+Useful for seeing how enterprise AI projects should ultimately be connected to
+measurable workflow and business outcomes rather than standalone model demos.
+
+---
+
+#### Block — Internal AI Agent Deployment
+
+**Type:** Case study
+**Level:** Intermediate
+**Focus:** Internal tools and enterprise adoption
+
+Block deployed an internal AI agent that connects employees with company tools
+and data, supports tasks such as querying information and generating SQL, and
+helps automate internal workflows.
+
+The case study is useful because it combines technical capability with
+organization-wide adoption and measurable productivity gains.
+
+---
+
+#### Harvey — AI for Complex Legal Workflows
+
+**Type:** Case study
+**Level:** Intermediate
+**Focus:** Human-in-the-loop enterprise AI
+
+Harvey uses AI to turn complex legal tasks into structured workflows where the
+system can ask follow-up questions, generate intermediate work, and allow human
+review before producing the final result.
+
+The deployment also had to satisfy enterprise security, privacy, compliance,
+and regional data-processing requirements.
+
+Useful for understanding how human review and enterprise constraints shape the
+architecture of high-stakes AI systems.
+
+---
+
+#### Decagon — AI Customer Support Agents
+
+**Type:** Case study
+**Level:** Intermediate
+**Focus:** Tool-integrated AI agents
+
+Decagon builds customer-support agents that integrate with existing ticketing
+systems, customer databases, and business processes rather than operating as
+isolated chatbots.
+
+Useful for studying how agents can combine model reasoning with enterprise
+systems and structured workflows while still needing reliability and policy
+compliance.
+
+---
+
+#### Sendbird — Enterprise AI Customer Service
+
+**Type:** Case study
+**Level:** Intermediate
+**Focus:** Production reliability and scaling
+
+Sendbird uses AI to power customer-support agents across a platform serving
+thousands of businesses.
+
+The case study covers the need to maintain accuracy, reliability, and
+enterprise requirements while automating high-volume conversations.
+
+Useful for understanding how an AI application changes when it has to operate
+reliably across many customers rather than succeed in a controlled prototype.
+
+---
+
+#### Vannevar Labs — Forward Deployed Engineering
+
+**Type:** Practitioner case study
+**Level:** Intermediate
+**Focus:** Building an FDE function
+
+Vannevar Labs explains why its engineering organization introduced Forward
+Deployed Engineers as it expanded across more customers, missions, and product
+areas.
+
+The article describes engineers embedding with users, learning their missions,
+building alongside them, and turning that understanding into new product
+capabilities.
+
+Useful because it shows Forward Deployed Engineering being adopted as an
+organizational model in response to real scaling and product-development
+problems.
