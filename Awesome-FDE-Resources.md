@@ -558,3 +558,103 @@ Useful for FDEs working with enterprise customers where production deployment
 may involve security, privacy, governance, compliance, safety, and organizational
 risk requirements.
 
+## 7. Working With Customers & Stakeholders
+
+Forward Deployed Engineering is not only about building the right system.
+FDEs also need to keep users, technical teams, decision-makers, and internal
+partners aligned while the solution is being developed and deployed.
+
+This means translating between business problems and technical decisions,
+setting expectations, communicating trade-offs, gathering feedback, and
+maintaining trust when requirements or constraints change.
+
+This includes:
+
+* Technical discovery conversations
+* Stakeholder identification and alignment
+* Setting expectations and communication cadence
+* Explaining technical trade-offs
+* Running project kickoffs
+* Demonstrating work in progress
+* Gathering and responding to feedback
+* Communicating blockers and risks
+* Working across engineering, product, sales, and customer teams
+* Keeping stakeholders aligned as scope changes
+
+### Resources
+
+#### [A Guide for Successful Client Assessments and Discoveries — Thoughtworks](https://www.thoughtworks.com/en-in/insights/blog/digital-innovation/client-assessments-discoveries-part-1-people)
+
+**Type:** Practitioner guide
+**Level:** Intermediate
+**Focus:** Client engagement and stakeholder alignment
+
+Covers the people side of technical customer engagements, including identifying
+stakeholders, agreeing on expectations, defining roles and responsibilities,
+establishing communication cadence, and maintaining transparency.
+
+Useful for FDEs because successful customer work depends on getting access to
+the right people and keeping technical and business stakeholders aligned
+throughout an engagement.
+
+---
+
+#### [Stakeholder Project Communication Plan — Atlassian](https://www.atlassian.com/team-playbook/plays/stakeholder-communications-plan)
+
+**Type:** Framework
+**Level:** Beginner–Intermediate
+**Focus:** Stakeholder communication
+
+Provides a practical framework for identifying who needs to be involved or
+informed, what information each group needs, which communication channels to
+use, and how frequently updates should happen.
+
+Useful for FDEs managing deployments involving customer engineers, end users,
+executives, security teams, product teams, and other stakeholders with very
+different information needs.
+
+---
+
+#### [Project Kickoff — Atlassian](https://www.atlassian.com/team-playbook/plays/project-kickoff)
+
+**Type:** Framework
+**Level:** Beginner
+**Focus:** Project alignment
+
+Provides a structure for getting project sponsors, delivery teams, and
+stakeholders aligned on goals, responsibilities, expectations, and how the
+project will operate.
+
+Useful at the beginning of an FDE engagement to make sure both the customer and
+delivery team understand what is being built, why it matters, who owns which
+decisions, and how progress will be evaluated.
+
+---
+
+#### [Run Effective Demo Meetings — Atlassian](https://www.atlassian.com/team-playbook/plays/run-demo-meetings)
+
+**Type:** Practical guide
+**Level:** Beginner
+**Focus:** Customer demos and feedback
+
+Explains how to structure demos so they show tangible progress, gather useful
+feedback, align stakeholders around goals, and identify necessary changes.
+
+Useful for FDEs because customer demos should not simply showcase technology.
+They are opportunities to validate whether the solution actually fits the
+workflow and expectations discovered earlier.
+
+---
+
+#### [End-to-End Demo — Atlassian](https://www.atlassian.com/team-playbook/plays/end-to-end-demo)
+
+**Type:** Framework
+**Level:** Beginner–Intermediate
+**Focus:** Iterative customer feedback
+
+Encourages teams to demonstrate the complete user experience early and
+repeatedly rather than waiting until individual components are polished.
+
+Useful for FDEs because showing an end-to-end workflow often exposes missing
+requirements, integration problems, and incorrect assumptions much earlier
+than reviewing individual features in isolation.
