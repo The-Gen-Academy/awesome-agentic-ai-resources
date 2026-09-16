@@ -146,6 +146,7 @@ Move from "I hope this works" to "I can measure whether it works." Learners shou
 | [AI Evals for Engineers](https://maven.com/parlance-labs/evals), Hamel Husain and Shreya Shankar | Paid course | 8 hrs async | Serious practitioners building eval programs. |
 | [Calibrating LLM-as-a-Judge](https://www.langchain.com/articles/llm-as-a-judge), LangChain | Blog | 20 min | Learners implementing human correction loops. |
 | [LLM-as-a-Judge Evaluator Templates](https://arize.com/llm-as-a-judge/), Arize | Guide | 20 min | Learners building reusable eval templates. |
+| [ClawBench](https://claw-bench.com/) ([code](https://github.com/reacher-z/ClawBench), [paper](https://arxiv.org/abs/2604.08523)) | Benchmark | 30-45 min | A live-web benchmark for evaluating browser agents on realistic, long-horizon tasks with request interception and execution evidence. |
 | [Evaluating and Debugging Generative AI](https://www.deeplearning.ai/short-courses/evaluating-debugging-generative-ai/), DeepLearning.AI and W&B | Short course | 50 min | Learners who want a Weights & Biases angle. |
 
 ## Week 5: Finetuning and Local Models
@@ -221,4 +222,3 @@ Identify real LLM risks, design mitigations, understand prompt injection, implem
 | [DataTalks.Club MLOps Zoomcamp](https://datatalks.club/blog/mlops-zoomcamp.html) | Course | Targeted modules | Learners who need broader MLOps/production infrastructure context. |
 | [NeMo Guardrails Tutorials](https://docs.nvidia.com/nemo/guardrails/latest/getting-started/tutorials/index.html) | Docs | 1-2 hrs | Learners implementing programmable guardrails. |
 | [OWASP GenAI Security Project](https://genai.owasp.org/) | Project hub | Reference | Learners tracking evolving AI security guidance. |
-
